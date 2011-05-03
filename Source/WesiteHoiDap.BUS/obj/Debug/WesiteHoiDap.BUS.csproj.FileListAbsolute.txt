@@ -1,5 +1,0 @@
-D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
-D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
-D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
-D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
-D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
