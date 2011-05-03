@@ -1,0 +1,396 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { 
+	padding: -10px;
+	margin: -10px;
+	list-style:none;	
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+a img { 
+	border: none;
+}
+
+.small{
+	color: #42413C;
+	font-size: 11px;
+	text-decoration: none; 
+}
+
+a:link {
+	color: #42413C;
+	text-decoration: none; 
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus{ 
+	text-decoration: none;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.wrapper {
+	width: 960px;
+	background: #FFF;
+	margin: 0 auto;
+}
+
+.header {
+	height: 90px;	
+	background:url(../image/A-Z180.JPG) #FBFCF5 no-repeat center;
+}
+
+.menu {
+	height: 38px;	
+	background:#ADB96E;
+}
+
+.content {
+
+	padding: 10px 0;
+	width: 960px;	
+	overflow:hidden;
+}
+	.content .left{
+		float: left;
+		display: inline;
+		width: 700px;
+	}
+	.content .sidebar{
+		float: right;
+		display: inline;
+		width: 250px;
+		background: #FFF;
+		padding-bottom: 10px;
+		margin: 5px;
+	}
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; 
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none;
+	border-top: 1px solid #666; 
+	margin-bottom: 15px;
+}
+ul.nav li {
+	border-bottom: 1px solid #666; 
+}
+ul.nav a, ul.nav a:visited { 
+	padding: 5px 5px 5px 15px;
+	display: block; 
+	width: 160px;  
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background: #CCC49F;	
+	clear: both; 
+	font-size:10px;
+	color:#333333;
+}
+/* ~~ item ~~*/
+.question{
+	margin: 5px;
+	padding: 5px;
+	text-align:left;	
+}
+.bread-crumb{
+	margin: 5px;
+	padding: 5px;
+	text-align:left;	
+}
+.top{
+	margin: 5px;
+	padding: 5px;
+	text-align:left;
+	border: 2px solid #E8E8E8;
+}
+
+.list-question{
+	margin: 5px;
+	padding: 5px;
+	text-align:left;
+}
+.header-list-question{
+	margin: auto;
+	padding: 0px;
+	text-align:left;
+}
+.content-list-question{
+	margin: auto;
+	padding: 0px;
+	text-align:left;
+}
+/*~~ ~~ menu list question*/
+table .menu-list-question  {	
+	background: #E3EBC2 ;		
+}
+
+td .menu-list-question {
+	margin: 0px;
+	padding: 0px;		
+	border-bottom: 5px solid #8B8B8B;	
+	text-align: center;		
+	background: #E3EBC2 ;
+	color: #000000;
+	float:left;
+	width: 80px;	
+	height: 25;
+}
+td .menu-list-question a{	
+	text-decoration:none;	
+	text-align: center;				
+}
+
+td .menu-list-question.active a, td.menu-list-question :hover{
+	border-bottom: 5px solid #ADB96E;
+	background: #E3EBC2;
+	color: #000000;
+	text-decoration:none;
+	font-weight:bold;
+	width: 80px;
+}
+	
+/*~~ hr~~*/
+
+/* ~~ style menu ~~*/
+table#nav{
+	border-spacing: 4px 0;
+}
+
+td#nav a{
+	padding: 7px;
+	border: 1px #666666 solid;
+	border-bottom: hidden;
+	border-radius: 8px 8px 0px 0px;
+	-moz-border-radius: 8px 8px 0px 0px;
+	-webkit-border-radius: 8px 8px 0px 0px;
+	text-align: center;
+	text-decoration:none;
+	font-weight: bold;	
+	font-size: 13px;
+	background: #E3EBC2 ;
+	color: #000000;
+	float:left;
+}
+
+td#nav.active a, td#nav :hover{
+	background: #C6D580;
+	color: #FFFFFF;
+	border: 1px #666666 inset;
+	border-bottom: hidden;
+
+}
+/*~~ ds câu hỏi chờ giải đáp~~*/
+#hor-zebra
+{	
+	margin: auto;	
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#hor-zebra td
+{
+	padding: 8px;	
+}
+#hor-zebra .odd
+{
+	background: #F3F7E6; 
+}
+
+/*~~item - left~~*/
+.itemWrapper{
+	margin: 5px;
+}
+.item{
+	background-color: #FFFFFF;
+    border: 2px solid #E8E8E8;
+    overflow: hidden;
+    padding: 4px;
+    width: 678px;
+}
+.itemContent{
+	
+}
+.itemTitle{
+	background-color: #E3EBC2;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding: 5px;
+	color: #252525;
+	font-weight:bold;
+	font-size: 13px;	
+}
+.itemContentMain{
+	padding: 4px;
+}
+/*~~item - right~~*/
+.boxWrapper{
+	margin-bottom: 5px;
+}
+.box{
+	background-color: #FFFFFF;
+    border: 2px solid #E8E8E8;
+    overflow: hidden;
+    padding: 4px;
+    width: 238px;
+}
+.boxContent{
+	
+}
+.boxTitle{
+	background-color: #EADCAE;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding: 5px;
+	color: #252525;
+	font-weight:bold;
+	font-size: 13px;	
+}
+.boxContentMain{
+	padding: 4px;
+	padding-left: 10px;
+}
+
+/*~~ link-1 ~~*/
+.link-1 {
+	 color: #006699;
+	 text-decoration: none;
+	 font-size: 16px;
+	 font-weight:bold;
+}
+
+.link-1 a{
+	 color: #006699;
+	 text-decoration: none;
+	 font-size: 16px;
+	 font-weight:bold;
+}
+	.link-1 a:hover, link-1 a:active, link-1 a:focus{
+	 color: #006699;
+	 text-decoration:underline;
+	 font-weight:bold;
+}
+
+/*~~ link-2 ~~*/
+.link-2{
+	 color: #006699;
+	 text-decoration: none;
+	 font-size: 14px;
+}
+
+.link-2 a{
+	 color: #006699;
+	 text-decoration: none;
+	 font-size: 14px;
+}
+	.link-2 a:hover, link-2 a:active, link-2 a:focus{
+	 color: #006699;
+	 text-decoration: none;	 
+	 font-weight: bold;
+}
+
+/*~~ link-1 ~~*/
+.link-3 {
+	 color: #006699;
+	 text-decoration: none;
+	 font-size: 12px;
+}
+.link-3 a{
+	 color: #006699;
+	 text-decoration: none;
+	 font-size: 12px;
+}
+	.link-3 a:hover, link-3 a:active, link-3 a:focus{
+	 color: #006699;
+	 text-decoration: underline;	 
+}
+
+/*~~ table điểm - cấp bậc ~~*/
+#score-table
+{	
+	margin: 5px;
+	padding: 5px;
+	text-align: left;
+	border-collapse: collapse;
+}
+#score-table th
+{
+	font-size: 13px;
+	padding: 5px;
+	font-weight: bold;	
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	vertical-align:middle;
+}
+#score-table td
+{
+	padding: 8px;
+	background: #e8edff; 
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+#score-table tr:hover td
+{
+	background: #d0dafd;
+	color: #339;
+}
+
+.answers-table
+{	
+	margin: auto;	
+	text-align: left;
+	border-collapse: collapse;
+}
+.answers-table th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+.answers-table tr
+{
+	padding: 8px;
+	background: #FFF; 
+	border-bottom: 2px solid #E8E8E8;	
+	border-top: 1px solid transparent;
+}
+.answers-table td
+{
+	padding: 8px;
+	background: #FFF; 	
+}
+.answers-table tr:hover td
+{
+	background: #F8FAEF;	
+}
