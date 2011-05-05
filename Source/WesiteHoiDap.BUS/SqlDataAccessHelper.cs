@@ -18,7 +18,7 @@ namespace WebsiteHoiDap.BUS
         {
             get
             {
-                string sqlCon = "Data Source=KHTN-F1e4617769;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
+                string sqlCon = @"Data Source=ANHVU-VAIO\MSSMLBIZ;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
                 return sqlCon;
             }
         }
