@@ -8,3 +8,8 @@ C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHo
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
+E:\HK6\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
+E:\HK6\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
+E:\HK6\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
+E:\HK6\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
+E:\HK6\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
