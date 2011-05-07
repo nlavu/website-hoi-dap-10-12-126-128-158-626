@@ -130,6 +130,9 @@ namespace WebsiteHoiDap.BUS
 
         #region method
 
+        // HIEP
+        // 08/05
+
         // 1. LAY DANH SACH TAT CA CAC CAU HOI
         public List<CauHoi> LayDSCauHoi()
         {
