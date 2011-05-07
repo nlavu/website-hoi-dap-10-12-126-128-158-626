@@ -136,7 +136,7 @@ namespace WebsiteHoiDap.BUS
             try
             {
                 // add tham số
-                List<SqlParameter> lstParam = new List<SqlParameter>();                
+                List<SqlParameter> lstParam = new List<SqlParameter>();
                 lstParam.Add(new SqlParameter("@tentaikhoan", strTenTaiKhoan));
                 lstParam.Add(new SqlParameter("@matkhau", strMatKhau));
                 lstParam.Add(new SqlParameter("@hoten", strHoTen));
