@@ -130,7 +130,7 @@ namespace WebsiteHoiDap.BUS
 
         #region method
 
-        // HIEP
+        // BY HIEP
         // 08/05
 
         // 1. LAY DANH SACH TAT CA CAC CAU HOI
