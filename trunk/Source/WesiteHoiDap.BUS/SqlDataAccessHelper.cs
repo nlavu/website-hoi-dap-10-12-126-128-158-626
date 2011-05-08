@@ -18,7 +18,7 @@ namespace WebsiteHoiDap.BUS
         {
             get
             {
-                string sqlCon = @"Data Source=NGOCHA-PC\SQLEXPRESS;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
+                string sqlCon = @"Data Source=PC2011040601IEO;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
                 return sqlCon;
             }
         }
