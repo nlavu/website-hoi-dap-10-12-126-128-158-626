@@ -75,15 +75,15 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
         
-        public int CapNhatChuDe(ChuDe chuDe)
+        public int CapNhatChuDe(int intMaChuDe, string strTenChuDe)
         {
             int res = 0;
             try
             {
                 List<SqlParameter> lstParameters = new List<SqlParameter>();
 
-                lstParameters.Add(new SqlParameter("@machude", chuDe.intMaChuDe));
-                lstParameters.Add(new SqlParameter("@tenchude", chuDe.strTenChuDe));
+                lstParameters.Add(new SqlParameter("@machude", intMaChuDe));
+                lstParameters.Add(new SqlParameter("@tenchude", strTenChuDe));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spCapNhatChuDe",lstParameters);
             }
@@ -128,14 +128,14 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
 
-        public int XoaChuDe(int iMaChuDe)
+        public int XoaChuDe(int intMaChuDe)
         {
             int res = 0;
             try
             {
                 List<SqlParameter> lstParameters = new List<SqlParameter>();
 
-                lstParameters.Add(new SqlParameter("@tenchude", iMaChuDe));
+                lstParameters.Add(new SqlParameter("@machude", intMaChuDe));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spXoaChuDe", lstParameters);
             }
