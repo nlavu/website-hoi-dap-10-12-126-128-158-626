@@ -26,3 +26,10 @@ E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\ob
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\bin\WebsiteHoiDap.dll
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\bin\WebsiteHoiDap.pdb
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
+C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
