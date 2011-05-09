@@ -18,17 +18,17 @@ namespace WebsiteHoiDap.BUS
         #endregion
 
         #region Properties
-        public int IntMaChuDe
+        public int MaChuDe
         {
             get { return intMaChuDe; }
             set { intMaChuDe = value; }
         }
-        public string StrTenChuDe
+        public string TenChuDe
         {
             get { return strTenChuDe; }
             set { strTenChuDe = value; }
         }
-        public int IntDaXoa
+        public int DaXoa
         {
             get { return intDaXoa; }
             set { intDaXoa = value; }
@@ -40,16 +40,19 @@ namespace WebsiteHoiDap.BUS
         /// Lấy DS Chủ Đề
         /// Created by  : Anh Vũ
         /// Date        : 5/5/2011
+        /// Edited by   : Thu Hà
+        /// Date        : 8/5/2011
         /// </summary>
         /// <param name="chuDe"> </param>
         /// <returns>DataTable dtDSHopDong</returns>
-        
+
         public List<ChuDe> LayDSChuDe()
         {
             List<ChuDe> lstDSChuDe = new List<ChuDe>();
+            DataTable dtDSChuDe = new DataTable();
             try
             {
-                DataTable dtDSChuDe = new DataTable();
+                
                 dtDSChuDe = SqlDataAccessHelper.ExecuteQuery("spLayDSChuDe");
                 foreach (DataRow dtRow in dtDSChuDe.Rows)
                 {
@@ -65,6 +68,7 @@ namespace WebsiteHoiDap.BUS
                 throw ex;
             }
             return lstDSChuDe;
+            //return dtDSChuDe;
         }
 
         /// <summary>
@@ -75,7 +79,7 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
         
-        public int CapNhatChuDe(int intMaChuDe, string strTenChuDe)
+        public int CapNhatChuDe()
         {
             int res = 0;
             try
@@ -102,7 +106,7 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
 
-        public int ThemChuDe(string strTenChuDe)
+        public int ThemChuDe()
         {
             int res = 0;
             try
@@ -124,11 +128,12 @@ namespace WebsiteHoiDap.BUS
         /// Xoá Chủ Đề
         /// Created by  : Anh Vũ
         /// Date        : 5/5/2011
+        /// Edited      : Thu Hà
         /// </summary>
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
-
-        public int XoaChuDe(int intMaChuDe)
+        
+        public int XoaChuDe()
         {
             int res = 0;
             try

@@ -127,6 +127,8 @@ namespace WebsiteHoiDap.BUS
         /// Thêm thành viên
         /// Created by  : Thu Hà
         /// Date        : 3/5/2011
+        /// Edite       : Thu Hà (thuộc tính giới tính)
+        /// 9/5/2011
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns>1: 0</returns>
@@ -199,6 +201,7 @@ namespace WebsiteHoiDap.BUS
         /// Đổi mật khẩu
         /// Created by  : Minh Anh
         /// Date        : 9/5/2011
+        /// Edited by   : Thu hà tham số @matkhau
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns>1: 0</returns>
@@ -210,7 +213,7 @@ namespace WebsiteHoiDap.BUS
                 // add tham số
                 List<SqlParameter> lstParam = new List<SqlParameter>();
                 lstParam.Add(new SqlParameter("@mathanhvien", intMaThanhVien));
-                lstParam.Add(new SqlParameter("@tentaikhoan", strMatKhau));
+                lstParam.Add(new SqlParameter("@matkhau", strMatKhau));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spDoiMatKhau", lstParam);
 
@@ -227,6 +230,7 @@ namespace WebsiteHoiDap.BUS
         /// Láy thông tin thành viên theo mã
         /// Created by  : Minh Anh
         /// Date        : 9/5/2011
+        /// Edited by   : Thu Hà (Ngayxoa)
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns><ThanhVien></returns>
@@ -256,7 +260,14 @@ namespace WebsiteHoiDap.BUS
                     res.MaLoaiTV = int.Parse(dtRow["MaLoaiTV"].ToString().Trim());
                     res.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
                     res.LyDo = dtRow["LyDo"].ToString();
-                    res.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    try
+                    {
+                        res.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    }
+                    catch (Exception e)
+                    {
+                        res.NgayXoa = DateTime.Parse("1/1/1900");
+                    }
                     res.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
                 }
             }
@@ -302,6 +313,7 @@ namespace WebsiteHoiDap.BUS
         /// Láy DS thành viên
         /// Created by  : Minh Anh
         /// Date        : 9/5/2011
+        /// Edited by   : Thu Hà (Ngayxoa)
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns>list<thanhvien></returns>
@@ -326,9 +338,24 @@ namespace WebsiteHoiDap.BUS
                     kq.Diem = int.Parse(dtRow["Diem"].ToString().Trim());
                     kq.CapBac = int.Parse(dtRow["CapBac"].ToString().Trim());
                     kq.MaLoaiTV = int.Parse(dtRow["MaLoaiTV"].ToString().Trim());
-                    kq.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
+                    try
+                    {
+                        kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    }
+                    catch (Exception e)
+                    {
+                        kq.NgayXoa = DateTime.Parse("1/1/1900");
+                    }
                     kq.LyDo = dtRow["LyDo"].ToString();
-                    kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    try
+                    {
+                        kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    }
+                    catch (Exception e)
+                    {
+                        kq.NgayXoa = DateTime.Parse("1/1/1900");
+                        throw e;
+                    }
                     kq.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
 
                     res.Add(kq);
@@ -345,6 +372,7 @@ namespace WebsiteHoiDap.BUS
         /// Láy DS thành viên theo tình trạng
         /// Created by  : Minh Anh
         /// Date        : 9/5/2011
+        /// Edited by   : Thu Hà (ngayxoa)
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns>list<thanhvien></returns>
@@ -373,7 +401,14 @@ namespace WebsiteHoiDap.BUS
                     kq.MaLoaiTV = int.Parse(dtRow["MaLoaiTV"].ToString().Trim());
                     kq.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
                     kq.LyDo = dtRow["LyDo"].ToString();
-                    kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    try
+                    {
+                        kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    }
+                    catch (Exception e)
+                    {
+                        kq.NgayXoa = DateTime.Parse("1/1/1900");
+                    }
                     kq.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
 
                     res.Add(kq);

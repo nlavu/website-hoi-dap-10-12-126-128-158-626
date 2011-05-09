@@ -6,7 +6,7 @@
 
 
 <asp:Content ID="Content_Left" ContentPlaceHolderID="ContentPlaceHolder_Left" runat="server">
-  <div>
+    <div>
     <UC:DatCauHoi id="idDatCauHoi" runat="server"></UC:DatCauHoi>
   </div>    
 </asp:Content>

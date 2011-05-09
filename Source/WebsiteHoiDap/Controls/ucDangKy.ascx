@@ -3,12 +3,26 @@
     // kiểm tra thông tin đăng ký
 </script>
 <asp:Panel ID="pnlDangKy" runat="server">
+<form id="frmKetQuaDangKy" runat="server" >
+<div class="itemWrapper">
+	<div class="item">
+   	 	<div class="itemContent">
+       	  <div class="itemTitle">Thông báo</div>
+          <div class="boxContentMain"> 
+            <asp:Label ID="lblKetQuaDangKy" runat="server"></asp:Label>
+          </div>
+         </div>
+     </div>
+</div>
+</form>
+          
+<form id="frmDangKy" runat="server" method="post" action="" >         
 <div class="itemWrapper">
 	<div class="item">
    	 	<div class="itemContent">
        	  <div class="itemTitle">Đăng ký</div>
-          <div class="boxContentMain"> 
-          <form id="Form1" runat="server" method="post" action="" >
+          <div class="boxContentMain">          
+          
                 <table width="100%" border="0" cellpadding="5" cellspacing="0">
                   <tr>
                     <td width="30%" align="right" ><label for="txtTenDangNhap">Tên đăng nhập (*):</label></td>
@@ -67,9 +81,10 @@
                     <td>&nbsp;</td>
                   </tr>
                 </table> 
-          </form>                           
+                                 
           </div>
    	 	</div>
 	</div>
 </div>
+</form>    
 </asp:Panel>

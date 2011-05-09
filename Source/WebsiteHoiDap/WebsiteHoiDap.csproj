@@ -86,6 +86,13 @@
     <Compile Include="Controls\ucDangNhap.ascx.designer.cs">
       <DependentUpon>ucDangNhap.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ucDanhSachChuDe.ascx.cs">
+      <DependentUpon>ucDanhSachChuDe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachChuDe.ascx.designer.cs">
+      <DependentUpon>ucDanhSachChuDe.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ucDatCauHoi.ascx.cs">
       <DependentUpon>ucDatCauHoi.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,6 +106,13 @@
     </Compile>
     <Compile Include="Controls\ucDoiMatKhau.ascx.designer.cs">
       <DependentUpon>ucDoiMatKhau.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachCauHoi.ascx.cs">
+      <DependentUpon>ucDanhSachCauHoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDanhSachCauHoi.ascx.designer.cs">
+      <DependentUpon>ucDanhSachCauHoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\ucTaiKhoan.ascx.cs">
       <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
@@ -255,8 +269,10 @@
     <Content Include="Controls\ucCauHoi.ascx" />
     <Content Include="Controls\ucDangKy.ascx" />
     <Content Include="Controls\ucDangNhap.ascx" />
+    <Content Include="Controls\ucDanhSachChuDe.ascx" />
     <Content Include="Controls\ucDatCauHoi.ascx" />
     <Content Include="Controls\ucDoiMatKhau.ascx" />
+    <Content Include="Controls\ucDanhSachCauHoi.ascx" />
     <Content Include="Controls\ucTaiKhoan.ascx" />
     <Content Include="Controls\ucThongTinHoatDong.ascx" />
     <Content Include="Controls\ucThongTinTaiKhoan.ascx" />
@@ -292,7 +308,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3417</DevelopmentServerPort>
+          <DevelopmentServerPort>3810</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

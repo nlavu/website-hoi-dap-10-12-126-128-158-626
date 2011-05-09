@@ -12,5 +12,50 @@ namespace WebsiteHoiDap {
     
     
     public partial class DuyetChuDe {
+        
+        /// <summary>
+        /// idDSChuDe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebsiteHoiDap.Controls.ucDanhSachChuDe idDSChuDe;
+        
+        /// <summary>
+        /// idDSCauHoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebsiteHoiDap.Controls.ucDanhSachCauHoi idDSCauHoi;
+        
+        /// <summary>
+        /// idTaiKhoan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebsiteHoiDap.Controls.ucTaiKhoan idTaiKhoan;
+        
+        /// <summary>
+        /// idDangNhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebsiteHoiDap.Controls.ucDangNhap idDangNhap;
+        
+        /// <summary>
+        /// idTop5ThanhVien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebsiteHoiDap.Controls.ucTop5ThanhVien idTop5ThanhVien;
     }
 }

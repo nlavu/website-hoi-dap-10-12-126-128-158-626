@@ -18,7 +18,9 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            frmDangKy.Visible = true;
+            frmKetQuaDangKy.Visible = false;
+            
         }
 
         protected void btnDongY_Click(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace WebsiteHoiDap.Controls
                 thanhVienDto.TinhTrang = 1;
                 thanhVienDto.HoTen = "";
                 thanhVienDto.NgaySinh = DateTime.Parse("1/1/1900");
-                thanhVienDto.GioiTinh = "Nam";
+                thanhVienDto.GioiTinh = 0;
                 thanhVienDto.MaLoaiTV = 2;  // đọc CSDL
                 thanhVienDto.DaXoa = 0;
                 
@@ -53,6 +55,12 @@ namespace WebsiteHoiDap.Controls
                 {
                     // nếu thành công thì xuất thông báo người dùng
                     // chuyển về trang chủ sau 5s
+                    frmDangKy.Visible = false;
+                    frmKetQuaDangKy.Visible = true;
+                    string strKQ = "Đăng ký thành công. Bấm vào đây để <span css='link-3'><a href='../Index.aspx'>quay về trang chủ</a></span>";
+                    strKQ += " hoặc <span css='link-3'><a href='../TrangCaNhan.aspx'>trang thông tin cá nhân.</a></span>";
+
+                    lblKetQuaDangKy.Text = strKQ;
                 }
             }
             catch (Exception ex)
