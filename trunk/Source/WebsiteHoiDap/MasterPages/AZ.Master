@@ -9,6 +9,12 @@
     <!--end attach css-->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script type="text/javascript" >
+        function submitDatCauHoi()
+        {
+            frmDatCauHoi.submit();
+        }
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -44,8 +50,18 @@
       <div class="content">
         <div class="left">
           <div class="question">
-              <input name="txtCauHoi" type="text" value="" size="50" />
-              <input type="submit" name="btnDatCauHoi" id="btnDatCauHoi" value="Đặt câu hỏi" />          	         	 
+            <form action="~/DatCauHoi.aspx" method="post" id="frmDatCauHoi">
+                <table>
+                    <tr valign="middle">
+                        <td>
+                            <input name="txtCauHoi" type="text" value="" size="50" />
+                        </td>
+                        <td>
+                            <img height="50px" width="50px" src="image/question.jpg" onclick="submitDatCauHoi()" />       
+                        </td>
+                    </tr>
+                </table>            
+             </form>    	         	 
           </div>
           <!--end .item dat cau hoi -->
 		  <div class="bread-crumb">          		

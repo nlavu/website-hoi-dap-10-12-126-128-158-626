@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Xml;
-
+using System.Configuration;
 namespace WebsiteHoiDap.BUS
 {
     public class SqlDataAccessHelper
@@ -18,7 +18,9 @@ namespace WebsiteHoiDap.BUS
         {
             get
             {
-                string sqlCon = @"Data Source=ANHVU-VAIO\MSSMLBIZ;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
+                //string sqlCon = "[ChuoiKetNoi]";
+                string sqlCon = @"Data Source=KHTN-F1e4617769;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
+                                
                 return sqlCon;
             }
         }

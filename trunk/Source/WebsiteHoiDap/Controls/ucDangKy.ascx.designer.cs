@@ -23,13 +23,31 @@ namespace WebsiteHoiDap.Controls {
         protected global::System.Web.UI.WebControls.Panel pnlDangKy;
         
         /// <summary>
-        /// Form1 control.
+        /// frmKetQuaDangKy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmKetQuaDangKy;
+        
+        /// <summary>
+        /// lblKetQuaDangKy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblKetQuaDangKy;
+        
+        /// <summary>
+        /// frmDangKy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmDangKy;
         
         /// <summary>
         /// txtTenDangNhap control.

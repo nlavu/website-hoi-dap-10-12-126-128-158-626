@@ -58,31 +58,30 @@ namespace WebsiteHoiDap.BUS
         /// Date 6/5/2011
         /// </summary>
         /// <param name="capbatDto"> </param>
-        /// <returns>1: 0</returns>
-        
-            public int ThemCapBac()
+        /// <returns>1: 0</returns>        
+        public int ThemCapBac()
+        {
+            int res = 0;
+            try
             {
-                int res = 0;
-                try
-                {
-                    // add tham số
-                    List<SqlParameter> lstParam = new List<SqlParameter>();
-                    lstParam.Add(new SqlParameter("@macapbac", intMaCapBac));
-                    lstParam.Add(new SqlParameter("@tencapbac", strTenCapBac));
-                    lstParam.Add(new SqlParameter("@diem", intDiem));
-                    lstParam.Add(new SqlParameter("@tongcauhoi", intTongCauHoi));
-                    lstParam.Add(new SqlParameter("@tongcautraloi", intTongCauTraLoi));
-                    
-                    res = SqlDataAccessHelper.ExecuteNoneQuery("spThemCapBac", lstParam);
+                // add tham số
+                List<SqlParameter> lstParam = new List<SqlParameter>();
+                //lstParam.Add(new SqlParameter("@macapbac", intMaCapBac)); -- Thu Hà: Thêm Cấp bậc không có tham số @macapbac
+                lstParam.Add(new SqlParameter("@tencapbac", strTenCapBac));
+                lstParam.Add(new SqlParameter("@diem", intDiem));
+                lstParam.Add(new SqlParameter("@tongcauhoi", intTongCauHoi));
+                lstParam.Add(new SqlParameter("@tongcautraloi", intTongCauTraLoi));
+                
+                res = SqlDataAccessHelper.ExecuteNoneQuery("spThemCapBac", lstParam);
 
-                }
-                catch (Exception e)
-                {
-                    res = 0;
-                    throw e;
-                }
-                return res;
             }
+            catch (Exception e)
+            {
+                res = 0;
+                throw e;
+            }
+            return res;
+        }
 
         /// <summary>
         /// Lấy DS cấp bậc
@@ -92,58 +91,87 @@ namespace WebsiteHoiDap.BUS
         /// <param name="capbatDto"> </param>
         /// <returns>DataTable dtDSCapBac</returns>
 
-            public List<CapBac> LayDSCapBac()
+        public List<CapBac> LayDSCapBac()
+        {
+            List<CapBac> lstDSCapBac = new List<CapBac>();
+            try
             {
-                List<CapBac> lstDSCapBac = new List<CapBac>();
-                try
+                DataTable dtDSCapBac = new DataTable();
+                dtDSCapBac = SqlDataAccessHelper.ExecuteQuery("spLayDSCapBac");
+                foreach (DataRow dtRow in dtDSCapBac.Rows)
                 {
-                    DataTable dtDSCapBac = new DataTable();
-                    dtDSCapBac = SqlDataAccessHelper.ExecuteQuery("spLayDSCapBac");
-                    foreach (DataRow dtRow in dtDSCapBac.Rows)
-                    {
-                        CapBac CapBac = new CapBac();
-                        CapBac.intMaCapBac = int.Parse(dtRow["MaCapBac"].ToString());
-                        CapBac.strTenCapBac = dtRow["TenCapBac"].ToString();
-                        CapBac.intDiem = int.Parse(dtRow["Diem"].ToString());
-                        CapBac.intTongCauHoi = int.Parse(dtRow["TongCauHoi"].ToString());
-                        CapBac.intTongCauTraLoi = int.Parse(dtRow["TongCauTraLoi"].ToString());
-                        lstDSCapBac.Add(CapBac);
-                    }
+                    CapBac CapBac = new CapBac();
+                    CapBac.intMaCapBac = int.Parse(dtRow["MaCapBac"].ToString());
+                    CapBac.strTenCapBac = dtRow["TenCapBac"].ToString();
+                    CapBac.intDiem = int.Parse(dtRow["Diem"].ToString());
+                    CapBac.intTongCauHoi = int.Parse(dtRow["TongCauHoi"].ToString());
+                    CapBac.intTongCauTraLoi = int.Parse(dtRow["TongCauTraLoi"].ToString());
+                    lstDSCapBac.Add(CapBac);
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                return lstDSCapBac;
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return lstDSCapBac;
+        }
 
         /// <summary>
         /// Lấy cấp bậc theo mã
         /// Khắc Anh
         /// Date 6/5/2011
+        /// Edit: Thu Hà
         /// </summary>
         /// <param name="capbatDto"> </param>
         /// <returns>1: 0</returns>
           
-        public int LayCapBacTheoMa()
-            {
-                int res = 0;
-                try
-                {
-                    // add tham số
-                    List<SqlParameter> lstParam = new List<SqlParameter>();
-                    lstParam.Add(new SqlParameter("@macapbac", intMaCapBac));
+        //public int LayCapBacTheoMa()
+        //    {
+        //        int res = 0;
+        //        try
+        //        {
+        //            // add tham số
+        //            List<SqlParameter> lstParam = new List<SqlParameter>();
+        //            lstParam.Add(new SqlParameter("@macapbac", intMaCapBac));
                     
-                    res = SqlDataAccessHelper.ExecuteNoneQuery("spLayCapBacTheoMa", lstParam);
+        //            res = SqlDataAccessHelper.ExecuteNoneQuery("spLayCapBacTheoMa", lstParam);
 
-                }
-                catch (Exception e)
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            res = 0;
+        //            throw e;
+        //        }
+        //        return res;
+        //    }
+
+        public CapBac LayCapBacTheoMa(int maCapBac)
+        {
+            CapBac capBac = new CapBac();
+            try
+            {
+                // add tham số
+                List<SqlParameter> lstParam = new List<SqlParameter>();
+                lstParam.Add(new SqlParameter("@macapbac", maCapBac));
+
+                DataTable dtCapBac = SqlDataAccessHelper.ExecuteQuery("spLayCapBacTheoMa", lstParam);
+
+                if (dtCapBac.Rows.Count == 1)
                 {
-                    res = 0;
-                    throw e;
+                    DataRow dtRow = dtCapBac.Rows[0];
+                    capBac.intMaCapBac = int.Parse(dtRow["MaCapBac"].ToString());
+                    capBac.intTongCauHoi = int.Parse(dtRow["TongCauHoi"].ToString());
+                    capBac.intTongCauTraLoi = int.Parse(dtRow["TongCauTraLoi"].ToString());
+                    capBac.strTenCapBac = dtRow["TenCapBac"].ToString();
                 }
-                return res;
+
             }
+            catch (Exception e)
+            {                
+                throw e;
+            }
+            return capBac;
+        }
 
         /// <summary>
         /// Cập nhật cấp bậc
@@ -167,7 +195,7 @@ namespace WebsiteHoiDap.BUS
                 lstParam.Add(new SqlParameter("@tongcautraloi", intTongCauTraLoi));
                     
 
-                res = SqlDataAccessHelper.ExecuteNoneQuery("spCapNhatCapBat", lstParam);
+                res = SqlDataAccessHelper.ExecuteNoneQuery("spCapNhatCapBac", lstParam);
 
             }
             catch (Exception e)
