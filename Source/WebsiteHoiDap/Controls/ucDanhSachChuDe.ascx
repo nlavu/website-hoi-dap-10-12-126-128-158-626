@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucDanhSachChuDe.ascx.cs" Inherits="WebsiteHoiDap.Controls.ucDanhSachChuDe" %>
 
-<form runat="server">
+<asp:Panel ID="pnlDSChuDe" runat="server">
    <div class="top">
         <asp:GridView ID="grvChuDe" runat="server" AllowPaging="false" ShowHeader="true" 
         ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" 
@@ -18,4 +18,4 @@
             
         </asp:GridView>     
     </div>
-</form>
+</asp:Panel>

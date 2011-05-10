@@ -17,8 +17,13 @@
     </script>
 </head>
 <body>
+<<<<<<< .mine
+<form runat="server">
+    <div class="wrapper">
+=======
 <form runat="server">
 <div class="wrapper">
+>>>>>>> .r33
       <div class="header">
       	       
       </div>
@@ -90,8 +95,12 @@
         <p>0812010 - 0812012 - 0812126 - 0812128 - 0812158 - 0812626. <a href="#">Privacy Policy </a> - <a href="#">About Our Ads</a> - <a href="#">Terms of Service </a> - <a href="#">Community Guidelines</a> - <a href="#">Safety Tips</a></p>
       </div>
       <!-- end .footer -->
-</div>
+  </div>
   <!-- end .wrapper -->
+<<<<<<< .mine
+</form>
+=======
   </form>
+>>>>>>> .r33
 </body>
 </html>

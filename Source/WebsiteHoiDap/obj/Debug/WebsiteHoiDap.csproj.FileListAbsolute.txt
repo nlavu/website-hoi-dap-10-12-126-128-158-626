@@ -40,3 +40,6 @@ C:\Users\Anh Vu\Desktop\New folder\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
 C:\Users\Anh Vu\Desktop\New folder\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\New folder\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
 C:\Users\Anh Vu\Desktop\New folder\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
+D:\Project\Do An NMCNPM\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\Do An NMCNPM\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
+D:\Project\Do An NMCNPM\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb

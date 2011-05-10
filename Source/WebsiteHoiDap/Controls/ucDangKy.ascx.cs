@@ -18,8 +18,9 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            frmDangKy.Visible = true;
-            frmKetQuaDangKy.Visible = false;
+            pnlDangKy.Visible = true;
+            pnlKetQuaDangKy.Visible = false;
+          
             
         }
 
@@ -28,6 +29,11 @@ namespace WebsiteHoiDap.Controls
             try
             {
                 // kiểm tra dữ liệu
+                if (kiemtraThongTinDangKy() == 0)   //nếu có lỗi
+                {
+                    pnlKetQuaDangKy.Visible = true;                    
+                    return;
+                }                
 
                 // nếu dữ liệu hợp lệ
                 ThanhVien thanhVienDto = new ThanhVien();
@@ -48,24 +54,24 @@ namespace WebsiteHoiDap.Controls
                 // nếu thất bại thì thông báo lỗi
                 if (kq == 0)
                 {
-                    throw new Exception("Đăng ký thành viên lỗi");
-                    Response.Redirect("DangKy.aspx");
+                    lblKetQuaDangKy.Text = "Đăng ký thành viên lỗi";                    
                 }
                 else if (kq == 1)
                 {
                     // nếu thành công thì xuất thông báo người dùng
                     // chuyển về trang chủ sau 5s
-                    frmDangKy.Visible = false;
-                    frmKetQuaDangKy.Visible = true;
-                    string strKQ = "Đăng ký thành công. Bấm vào đây để <span css='link-3'><a href='../Index.aspx'>quay về trang chủ</a></span>";
+                    pnlDangKy.Visible = false;
+                    pnlKetQuaDangKy.Visible = true;
+                    string strKQ = "Đăng ký thành công. Chào mừng bạn đã đến với website Hỏi Đáp A-Z.<br> Bấm vào đây để <span css='link-3'><a href='../Index.aspx'>quay về trang chủ</a></span>";
                     strKQ += " hoặc <span css='link-3'><a href='../TrangCaNhan.aspx'>trang thông tin cá nhân.</a></span>";
 
+                    lblKetQuaDangKy.Height = 200;
                     lblKetQuaDangKy.Text = strKQ;
                 }
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message);
+                lblKetQuaDangKy.Text = ex.Message.ToString();
             }
 
         }
@@ -74,6 +80,129 @@ namespace WebsiteHoiDap.Controls
         {
             // chuyển hướng trang web về trang chủ
             Response.Redirect("Index.aspx", true);
-        }       
+        }
+        public int kiemtraThongTinDangKy()
+        {            
+            // kiểm tra chiều dài tên tài khoản
+            if (txtTenDangNhap.Text.Length < 6 || txtTenDangNhap.Text.Length > 20)
+            {
+                lblKetQuaDangKy.Text = "Chiều dài tên đăng nhập không hợp lệ. (>=6 và =20)";
+                txtTenDangNhap.Focus();
+                return 0;
+            }
+            // kiểm tra có kí tự lạ
+            if (txtTenDangNhap.Text.IndexOfAny(" ~!@#$%^&*()+.".ToCharArray()) > 0)
+            {
+                lblKetQuaDangKy.Text = "Tên đăng nhập chỉ chứa các kí tự A-Z, a-z, 0-9, và dấu _";
+                txtTenDangNhap.Focus();
+                return 0;
+            }
+            // kiểm tra chiều dài mật khẩu
+            if (txtMatKhau.Text.Length < 6 || txtMatKhau.Text.Length > 20)
+            {
+                lblKetQuaDangKy.Text = "Chiều dài mật khẩu không hợp lệ. (>=6 và =20)";
+                txtMatKhau.Focus();
+                return 0;
+            }
+            //kiểm tra khớp mật khẩu
+            if (txtMatKhau.Text.CompareTo(txtMatKhau2.Text) != 0)
+            {
+                lblKetQuaDangKy.Text = "Mật khẩu không khớp";
+                txtMatKhau2.Focus();
+                return 0;
+            }
+            //kiểm tra Email
+            if (txtEmail.Text.Length <= 0)
+            {
+                lblKetQuaDangKy.Text = "Bạn chưa nhập email.";
+                txtEmail.Focus();
+                return 0;
+            }
+            if (kiemtraEmail(txtEmail.Text) == 0)
+            {
+                lblKetQuaDangKy.Text = "Email không hợp lệ.";
+                txtEmail.Focus();
+                return 0;
+            }
+            //kiểm tra đồng ý điều khoản website
+            if (chkDongYDieuKhoan.Checked == false)
+            {
+                lblKetQuaDangKy.Text = "Bạn chưa click đồng ý điều khoản của Website.";
+                return 0;
+            }
+            return 1;
+        }
+        public int kiemtraEmail(string email)
+        {
+            try
+            {
+                //testing               
+
+                //Chuyển chuỗi email thành char
+                char[] arrEmail = email.ToCharArray();
+                //kiểm tra thành phần @
+                int i = 0;
+                while (i < arrEmail.Length && arrEmail[i].CompareTo('@') != 0)
+                {
+                    char c = arrEmail[i];
+                    if ((c.CompareTo('0') >= 0 && c.CompareTo('9') <= 0)
+                        || (c.CompareTo('a') >= 0 && c.CompareTo('z') <= 0)
+                        || (c.CompareTo('A') >= 0 && c.CompareTo('Z') <= 0)
+                        || c.CompareTo('_') == 0)
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+
+                i++;
+                // nếu kết thúc chuỗi
+                if (i == arrEmail.Length)
+                    return 0;
+                // tìm thành phần .
+                while (i < arrEmail.Length && arrEmail[i].CompareTo('.') != 0)
+                {
+                    char c = arrEmail[i];
+                    if ((c.CompareTo('0') >= 0 && c.CompareTo('9') <= 0)
+                        || (c.CompareTo('a') >= 0 && c.CompareTo('z') <= 0)
+                        || (c.CompareTo('A') >= 0 && c.CompareTo('Z') <= 0))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                i++;
+                // nếu kết thúc chuỗi
+                if (i == arrEmail.Length)
+                    return 0;
+                // duyệt thành phần còn lại
+                while (i < arrEmail.Length)
+                {
+                    char c = arrEmail[i];
+                    if ((c.CompareTo('0') >= 0 && c.CompareTo('9') <= 0)
+                        || (c.CompareTo('a') >= 0 && c.CompareTo('z') <= 0)
+                        || (c.CompareTo('A') >= 0 && c.CompareTo('Z') <= 0)
+                        || (c.CompareTo('.') == 0))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return 1;
+        }
     }
 }

@@ -14,22 +14,13 @@ namespace WebsiteHoiDap.Controls {
     public partial class ucDangKy {
         
         /// <summary>
-        /// pnlDangKy control.
+        /// pnlKetQuaDangKy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlDangKy;
-        
-        /// <summary>
-        /// frmKetQuaDangKy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmKetQuaDangKy;
+        protected global::System.Web.UI.WebControls.Panel pnlKetQuaDangKy;
         
         /// <summary>
         /// lblKetQuaDangKy control.
@@ -41,13 +32,13 @@ namespace WebsiteHoiDap.Controls {
         protected global::System.Web.UI.WebControls.Label lblKetQuaDangKy;
         
         /// <summary>
-        /// frmDangKy control.
+        /// pnlDangKy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmDangKy;
+        protected global::System.Web.UI.WebControls.Panel pnlDangKy;
         
         /// <summary>
         /// txtTenDangNhap control.

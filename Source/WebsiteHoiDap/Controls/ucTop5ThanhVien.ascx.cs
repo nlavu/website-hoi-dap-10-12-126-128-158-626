@@ -21,8 +21,9 @@ namespace WebsiteHoiDap.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             ThanhVien thanhVien = new ThanhVien();
+
             this.grvTop5ThanhVien.DataSource = thanhVien.LayDSThanhVien();
             this.grvTop5ThanhVien.DataBind();
-         }
+         } 
     }
 }

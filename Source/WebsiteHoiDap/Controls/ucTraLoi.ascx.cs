@@ -11,7 +11,6 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using WebsiteHoiDap.BUS;
-//using WebsiteHoiDap.BUS.CauHoi; -- Edit by : Anh Vũ
 
 namespace WebsiteHoiDap.Controls
 {
@@ -43,15 +42,14 @@ namespace WebsiteHoiDap.Controls
                 kq = cauTraLoi.ThemCauTraLoi();
                 if (kq == 1)
                 {
-                    frmKetQuaTraLoi.Visible = true;
-                    lblKetQuaTraLoi.Text = "Đăng câu trả lời thành công!";
-                    frmTraLoiCauHoi.Visible = false;
+                    //frmKetQuaTraLoi.Visible = true;
+                    //lblKetQuaTraLoi.Text = "Đăng câu trả lời thành công!";
+                    //frmTraLoiCauHoi.Visible = false;
                 }
                 else
                 {
-                    //Edit by : Anh Vũ
-                    frmKetQuaTraLoi.Visible = true;
-                    lblKetQuaTraLoi.Text = "Đăng câu trả lời bị lỗi";
+                    //frmKetQuaDatTraLoi.Visible = true;
+                    //lblKetQuaTraLoi.Text = "Đăng câu trả lời bị lỗi";
                 }
 
             }

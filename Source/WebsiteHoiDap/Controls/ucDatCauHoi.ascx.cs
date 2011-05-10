@@ -23,11 +23,15 @@ namespace WebsiteHoiDap.Controls
             this.lstChuDe.DataValueField = "MaChuDe";
             this.lstChuDe.DataTextField = "TenChuDe";
             this.lstChuDe.DataBind();
-            frmKetQuaDatCauHoi.Visible = false;
+
+            pnlKetQuaDatCauHoi.Visible = false;
+            chkNgayHetHan.Checked = false;
+            CalenderNgayHetHan.Visible = false;
           
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
+      
+        protected void btnGuiCauHoi_Click(object sender, EventArgs e)
         {
             WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
 
@@ -37,48 +41,53 @@ namespace WebsiteHoiDap.Controls
             cauHoi.BaoCaoViPham = 0;
             cauHoi.NoiDungCauHoi = txtCauHoi.Text;
             cauHoi.GhiChu = txtGhiChu.Text;
-            cauHoi.MaThanhVien = 1;
+            cauHoi.MaThanhVien = 1; //khi có Session sẽ sửa lại
             cauHoi.MaChuDe = int.Parse(lstChuDe.SelectedValue.ToString());
-            cauHoi.DaXoa = 0;
-            cauHoi.LyDo = "";
-            //cauHoi.NgayXoa = "";
-            cauHoi.NguoiXoa = 2;
+            cauHoi.DaXoa = 0;            
             cauHoi.SoNguoiBinhChon = 0;
-            //cauHoi.NgayCapNhat = "";
-            cauHoi.NguoiCapNhat = 2;
-
+            
+            // kiểm tra nội dung câu hỏi
             if (cauHoi.NoiDungCauHoi == "")
             {
-                frmKetQuaDatCauHoi.Visible = true;
-                lblKetQuaDatCauHoi.Text = "Chưa nhập nội dung câu hỏi!";
+                pnlKetQuaDatCauHoi.Visible = true;
+                lblKetQuaDatCauHoi.Text = "<span class='message'>Chưa nhập nội dung câu hỏi!</span>";
+                txtCauHoi.Focus();
+                return;
             }
-               
-            //else
-           
-            //    if (cauHoi.NgayHoi > cauHoi.NgayHetHan)
-            //    {
-            //        frmKetQuaDatCauHoi.Visible = true;
-            //        lblKetQuaDatCauHoi.Text = "Ngày hết hạn không đúng quy định!";
-            //    }
-                else
-                {
-                    int kq;
-                    kq = cauHoi.ThemCauHoi();
-                    if (kq == 1)
-                    {
-                        frmKetQuaDatCauHoi.Visible = true;
-                        lblKetQuaDatCauHoi.Text = "Đặt câu hỏi thành công!";
-                        frmDatCauHoi.Visible = false;
-                    }
-                    else
-                    {
-                        frmKetQuaDatCauHoi.Visible = true;
-                        lblKetQuaDatCauHoi.Text = "Đặt câu hỏi bị lỗi!";
-                    }
 
-                }
-          
+            // kiểm tra ngày hết hạn nếu có --> check box
+            // thu hà          
+            if (DateTime.Compare(cauHoi.NgayHoi, cauHoi.NgayHetHan) > 0 )
+            {
+                pnlKetQuaDatCauHoi.Visible = true;
+                lblKetQuaDatCauHoi.Text = "<span class='message'>Ngày hết hạn không đúng quy định!</span>";
+                return;
+            }
+            // thêm câu hỏi vào CSDL
+            int kq;
+            kq = cauHoi.ThemCauHoi();
+            if (kq == 1)
+            {
+                pnlKetQuaDatCauHoi.Visible = true;
+                lblKetQuaDatCauHoi.Text = "Đặt câu hỏi thành công!";
+                lblKetQuaDatCauHoi.Height = 200;
+                pnlDatCauHoi.Visible = false;
+            }
+            else
+            {
+                pnlKetQuaDatCauHoi.Visible = true;
+                lblKetQuaDatCauHoi.Text = "Đặt câu hỏi bị lỗi!";
+            }
 
+            
+        }
+
+        protected void chkNgayHetHan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkNgayHetHan.Checked)
+                CalenderNgayHetHan.Visible = true;
+            else
+                CalenderNgayHetHan.Visible = false;
         }
     }
 }
