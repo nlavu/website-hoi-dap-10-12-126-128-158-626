@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using WebsiteHoiDap.BUS;
 
 namespace WebsiteHoiDap.Controls
 {
@@ -17,7 +18,21 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Id User
+            int IDUser = 1;
+            ThanhVien thanhVien = new ThanhVien();
+            thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
 
+            idTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
+            idDiem.Text = thanhVien.Diem.ToString();
+            idCapBac.Text = thanhVien.CapBac.ToString();
+
+        }
+
+        protected void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            //đăng xuất
+            Response.Redirect("Index.aspx");
         }
     }
 }

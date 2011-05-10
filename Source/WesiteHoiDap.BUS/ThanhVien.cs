@@ -237,7 +237,7 @@ namespace WebsiteHoiDap.BUS
         public ThanhVien LayThongTinThanhVienTheoMa(int intMaThanhVien)
         {
             ThanhVien res = new ThanhVien();
-            res = null;
+
             try
             {
                 // add tham số
@@ -247,7 +247,7 @@ namespace WebsiteHoiDap.BUS
                 dtThanhVien = SqlDataAccessHelper.ExecuteQuery("spLayThongTinThanhVienTheoMa", lstParam);
                 foreach (DataRow dtRow in dtThanhVien.Rows)
                 {
-                    res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
+                    //res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim()); -- Edit by: Anh Vu
                     res.TenTaiKhoan = dtRow["TenTaiKhoan"].ToString();
                     res.MatKhau = dtRow["MatKhau"].ToString();
                     res.HoTen = dtRow["HoTen"].ToString();
@@ -259,7 +259,14 @@ namespace WebsiteHoiDap.BUS
                     res.CapBac = int.Parse(dtRow["CapBac"].ToString().Trim());
                     res.MaLoaiTV = int.Parse(dtRow["MaLoaiTV"].ToString().Trim());
                     res.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
-                    res.LyDo = dtRow["LyDo"].ToString();
+                    try
+                    {
+                        res.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        res.LyDo = "";
+                    }
                     try
                     {
                         res.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
@@ -268,14 +275,22 @@ namespace WebsiteHoiDap.BUS
                     {
                         res.NgayXoa = DateTime.Parse("1/1/1900");
                     }
-                    res.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    try
+                    {
+                        res.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        res.NguoiXoa = int.MinValue;
+                    }
                 }
             }
             catch (Exception e)
             {
                 res = null;
-                throw e;
+                //throw e;
             }
+
             return res;
         }
 
