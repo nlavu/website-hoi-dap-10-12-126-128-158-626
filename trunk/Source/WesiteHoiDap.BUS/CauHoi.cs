@@ -12,119 +12,123 @@ namespace WebsiteHoiDap.BUS
         #region Member Variables
 
         int intMaCauHoi = int.MinValue;
-        DateTime dtmNgayHoi = DateTime.Parse("1/1/1990");
-        DateTime dtmNgayHetHan = DateTime.Parse("1/1/1990");
-        int intDanhGia = int.MinValue;
-        int intBaoCaoViPham = int.MinValue;
-        string strNoiDungCauHoi = String.Empty;
-        string strGhiChu = String.Empty;
-        int intMaThanhVien = int.MinValue;
-        int intMaChuDe = int.MinValue;
-        int intDaXoa = int.MinValue;
-        string strLyDo = String.Empty;
-        DateTime dtmNgayXoa = DateTime.Parse("1/1/1990");
-        int intNguoiXoa = int.MinValue;
-        int intSoNguoiBinhChon = int.MinValue;
-        DateTime dtmNgayCapNhat = DateTime.Parse("1/1/1990");
-        int intNguoiCapNhat = int.MinValue;
-
-        #endregion
-
-        #region Properties
 
         public int MaCauHoi
         {
             get { return intMaCauHoi; }
             set { intMaCauHoi = value; }
         }
+        DateTime dtmNgayHoi = DateTime.Parse("1/1/1990");
+
         public DateTime NgayHoi
         {
             get { return dtmNgayHoi; }
             set { dtmNgayHoi = value; }
         }
+        DateTime dtmNgayHetHan = DateTime.Parse("1/1/1990");
 
         public DateTime NgayHetHan
         {
             get { return dtmNgayHetHan; }
             set { dtmNgayHetHan = value; }
         }
+        int intDanhGia = int.MinValue;
 
         public int DanhGia
         {
             get { return intDanhGia; }
             set { intDanhGia = value; }
         }
+        int intBaoCaoViPham = int.MinValue;
 
         public int BaoCaoViPham
         {
             get { return intBaoCaoViPham; }
             set { intBaoCaoViPham = value; }
         }
+        string strNoiDungCauHoi = String.Empty;
 
         public string NoiDungCauHoi
         {
             get { return strNoiDungCauHoi; }
             set { strNoiDungCauHoi = value; }
         }
+        string strGhiChu = String.Empty;
 
         public string GhiChu
         {
             get { return strGhiChu; }
             set { strGhiChu = value; }
         }
+        int intMaThanhVien = int.MinValue;
+
         public int MaThanhVien
         {
             get { return intMaThanhVien; }
             set { intMaThanhVien = value; }
         }
+        int intMaChuDe = int.MinValue;
 
         public int MaChuDe
         {
             get { return intMaChuDe; }
             set { intMaChuDe = value; }
         }
+        int intDaXoa = int.MinValue;
 
         public int DaXoa
         {
             get { return intDaXoa; }
             set { intDaXoa = value; }
         }
+        string strLyDo = String.Empty;
 
         public string LyDo
         {
             get { return strLyDo; }
             set { strLyDo = value; }
         }
+        DateTime dtmNgayXoa = DateTime.Parse("1/1/1990");
 
         public DateTime NgayXoa
         {
             get { return dtmNgayXoa; }
             set { dtmNgayXoa = value; }
         }
+        int intNguoiXoa = int.MinValue;
 
         public int NguoiXoa
         {
             get { return intNguoiXoa; }
             set { intNguoiXoa = value; }
         }
+        int intSoNguoiBinhChon = int.MinValue;
 
         public int SoNguoiBinhChon
         {
             get { return intSoNguoiBinhChon; }
             set { intSoNguoiBinhChon = value; }
         }
+        DateTime dtmNgayCapNhat = DateTime.Parse("1/1/1990");
 
         public DateTime NgayCapNhat
         {
             get { return dtmNgayCapNhat; }
             set { dtmNgayCapNhat = value; }
         }
+        int intNguoiCapNhat = int.MinValue;
 
         public int NguoiCapNhat
         {
             get { return intNguoiCapNhat; }
             set { intNguoiCapNhat = value; }
         }
+
+        #endregion
+
+        #region Properties
+
+        
 
         #endregion
 
@@ -159,18 +163,42 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauHoi.NgayHetHan = DateTime.Parse(dtRow["NgayHetHan"].ToString());
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         cauHoi.NgayHetHan = DateTime.Parse("1/1/1900");
                     }
-                    cauHoi.DanhGia = int.Parse(dtRow["DanhGia"].ToString().Trim());
+                    try
+                    {
+                        cauHoi.DanhGia = int.Parse(dtRow["DanhGia"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        cauHoi.DanhGia = 0;
+                    }
+                    
                     cauHoi.BaoCaoViPham = int.Parse(dtRow["BaoCaoViPham"].ToString().Trim());
+                    
+
                     cauHoi.NoiDungCauHoi = dtRow["NoiDungCauHoi"].ToString();
-                    cauHoi.GhiChu = dtRow["GhiChu"].ToString();
+                    try
+                    {
+                        cauHoi.GhiChu = dtRow["GhiChu"].ToString();
+                    }
+                    catch
+                    {
+                        cauHoi.GhiChu = "";
+                    }
                     cauHoi.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
                     cauHoi.MaChuDe = int.Parse(dtRow["MaChuDe"].ToString().Trim());
                     cauHoi.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
-                    cauHoi.LyDo = dtRow["LyDo"].ToString();
+                    try
+                    {
+                        cauHoi.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        cauHoi.LyDo = "";
+                    }
                     //Thu Hà
                     //Ngày xóa có thể null --> thêm điều kiện kiểm tra
                     try
@@ -181,8 +209,22 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauHoi.NgayXoa = DateTime.Parse("1/1/1900");
                     }
-                    cauHoi.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
-                    cauHoi.SoNguoiBinhChon = int.Parse(dtRow["SoNguoiBinhChon"].ToString().Trim());
+                    try
+                    {
+                        cauHoi.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        cauHoi.NguoiXoa = int.MinValue;
+                    }
+                    try
+                    {
+                        cauHoi.SoNguoiBinhChon = int.Parse(dtRow["SoNguoiBinhChon"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        cauHoi.SoNguoiBinhChon = 0;
+                    }
                     //Thu Hà
                     //Ngày cập nhật có thể null --> thêm điều kiện kiểm tra
                     try
@@ -193,8 +235,14 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauHoi.NgayCapNhat = DateTime.Parse("1/1/1900");
                     }
-                    cauHoi.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString().Trim());
-
+                    try
+                    {
+                        cauHoi.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        cauHoi.NguoiCapNhat = 0;
+                    }
                     lstDanhSachCauHoi.Add(cauHoi);
                 }
             }
@@ -238,7 +286,7 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauHoi.NgayHetHan = DateTime.Parse(dtRow["NgayHetHan"].ToString());
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         cauHoi.NgayHetHan = DateTime.Parse("1/1/1900");
                     }
@@ -449,7 +497,14 @@ namespace WebsiteHoiDap.BUS
                 // Thu Hà: Thêm câu hỏi không có mã câu hỏi
                 //lstParam.Add(new SqlParameter("@macauhoi", intMaCauHoi));
                 lstParam.Add(new SqlParameter("@ngayhoi", dtmNgayHoi));
-                lstParam.Add(new SqlParameter("@ngayhethan", dtmNgayHetHan));
+                try
+                {
+                    lstParam.Add(new SqlParameter("@ngayhethan", dtmNgayHetHan));
+                }
+                catch
+                {
+                    dtmNgayHetHan = DateTime.Parse("1/1/1900");
+                }
                 lstParam.Add(new SqlParameter("@danhgia", intDanhGia));
                 lstParam.Add(new SqlParameter("@baocaovipham", intBaoCaoViPham));
                 lstParam.Add(new SqlParameter("@noidungcauhoi", strNoiDungCauHoi));
@@ -457,14 +512,53 @@ namespace WebsiteHoiDap.BUS
                 lstParam.Add(new SqlParameter("@mathanhvien", intMaThanhVien));
                 lstParam.Add(new SqlParameter("@machude", intMaChuDe));
                 lstParam.Add(new SqlParameter("@daxoa", intDaXoa));
-                lstParam.Add(new SqlParameter("@lydo", strLyDo));
-                lstParam.Add(new SqlParameter("@ngayxoa", dtmNgayXoa));
-                lstParam.Add(new SqlParameter("@nguoixoa", intNguoiXoa));
-                lstParam.Add(new SqlParameter("@songuoibinhchon", intSoNguoiBinhChon));
-                lstParam.Add(new SqlParameter("@ngaycapnhat", dtmNgayCapNhat));
-                lstParam.Add(new SqlParameter("@nguoicapnhat", intNguoiCapNhat));
 
-                res = SqlDataAccessHelper.ExecuteNoneQuery("spThemCauHoi");
+                try
+                {
+                    lstParam.Add(new SqlParameter("@lydo", strLyDo));
+                }
+                catch
+                {
+                    strLyDo = "";
+                }
+                try
+                {
+                    lstParam.Add(new SqlParameter("@ngayxoa", dtmNgayXoa));
+                }
+                catch
+                {
+                    dtmNgayXoa = DateTime.Parse("1/1/1900");
+                }
+
+                try
+                {
+                    lstParam.Add(new SqlParameter("@nguoixoa", intNguoiXoa));
+                }
+                catch
+                {
+                    intNguoiXoa = int.MinValue;
+                }
+
+                lstParam.Add(new SqlParameter("@songuoibinhchon", intSoNguoiBinhChon));
+                try
+                {
+                    lstParam.Add(new SqlParameter("@ngaycapnhat", dtmNgayCapNhat));
+                }
+                catch 
+                {
+                    dtmNgayCapNhat = DateTime.Parse("1/1/1900");
+                }
+                try
+                {
+                    lstParam.Add(new SqlParameter("@nguoicapnhat", intNguoiCapNhat));
+                }
+                catch
+                {
+                    intNguoiCapNhat = int.MinValue;
+                }
+
+                // Ngọc Hà :Phải truyền vào truy vấn lstParam --10/05/2011
+                res = SqlDataAccessHelper.ExecuteNoneQuery("spThemCauHoi",lstParam);
             }
 
             catch (Exception e)
