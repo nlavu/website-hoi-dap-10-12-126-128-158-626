@@ -17,6 +17,7 @@
     </script>
 </head>
 <body>
+<form runat="server">
 <div class="wrapper">
       <div class="header">
       	       
@@ -91,5 +92,6 @@
       <!-- end .footer -->
 </div>
   <!-- end .wrapper -->
+  </form>
 </body>
 </html>

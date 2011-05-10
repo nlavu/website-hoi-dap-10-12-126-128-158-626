@@ -17,15 +17,12 @@ namespace WebsiteHoiDap.Controls
 {
     public partial class ucTop5ThanhVien : System.Web.UI.UserControl
     {
+        //Edit by : Anh Vũ
         protected void Page_Load(object sender, EventArgs e)
         {
             ThanhVien thanhVien = new ThanhVien();
-            this.grvTọp5ThanhVien.DataSource = thanhVien.LayDSThanhVien();
-            this.grvTọp5ThanhVien.DataBind();
+            this.grvTop5ThanhVien.DataSource = thanhVien.LayDSThanhVien();
+            this.grvTop5ThanhVien.DataBind();
          }
-        protected void grvTọpThanhVien_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
