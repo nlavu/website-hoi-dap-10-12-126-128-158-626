@@ -440,29 +440,53 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauHoi.NgayHetHan = DateTime.Parse(dtRow["NgayHetHan"].ToString());
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         cauHoi.NgayHetHan = DateTime.Parse("1/1/1900");
                     }
                     cauHoi.DanhGia = int.Parse(dtRow["DanhGia"].ToString().Trim());
                     cauHoi.BaoCaoViPham = int.Parse(dtRow["BaoCaoViPham"].ToString().Trim());
                     cauHoi.NoiDungCauHoi = dtRow["NoiDungCauHoi"].ToString();
-                    cauHoi.GhiChu = dtRow["GhiChu"].ToString();
+                    //Anh Vu
+                    try
+                    {
+                        cauHoi.GhiChu = dtRow["GhiChu"].ToString();
+                    }
+                    catch
+                    {
+                        cauHoi.GhiChu = "";
+                    }
                     cauHoi.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
                     cauHoi.MaChuDe = int.Parse(dtRow["MaChuDe"].ToString().Trim());
                     cauHoi.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
-                    cauHoi.LyDo = dtRow["LyDo"].ToString();
+                    //Anh Vu
+                    try
+                    {
+                        cauHoi.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        cauHoi.LyDo = "";
+                    }
                     //Thu Hà
                     //Ngày xóa có thể null --> thêm điều kiện kiểm tra
                     try
                     {
                         cauHoi.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         cauHoi.NgayXoa = DateTime.Parse("1/1/1900");
                     }
-                    cauHoi.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    //Anh Vu
+                    try
+                    {
+                        cauHoi.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        cauHoi.NguoiXoa = 0;
+                    }
                     cauHoi.SoNguoiBinhChon = int.Parse(dtRow["SoNguoiBinhChon"].ToString().Trim());
                     //Thu Hà
                     //Ngày hết hạn có thể null --> thêm điều kiện kiểm tra
@@ -470,18 +494,26 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauHoi.NgayCapNhat = DateTime.Parse(dtRow["NgayCapNhat"].ToString());
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         cauHoi.NgayCapNhat = DateTime.Parse("1/1/1900");
                     }
-                    cauHoi.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString().Trim());
+                    //Anh Vu
+                    try
+                    {
+                        cauHoi.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        cauHoi.NguoiCapNhat = 0;
+                    }
 
                     lstDanhSachCauHoi.Add(cauHoi);
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw e;
+                throw ex;
             }
 
             return lstDanhSachCauHoi;

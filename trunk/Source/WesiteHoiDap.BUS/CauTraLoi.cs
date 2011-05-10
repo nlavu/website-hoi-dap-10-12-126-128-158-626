@@ -166,7 +166,7 @@ namespace WebsiteHoiDap.BUS
                     }
                     catch
                     {
-                        cauTraLoiDto.LyDo = dtRow["LyDo"]
+                        cauTraLoiDto.LyDo = dtRow["LyDo"].ToString();
                     }
                     try
                     {
@@ -229,33 +229,62 @@ namespace WebsiteHoiDap.BUS
                     cauTraLoiDto.SoSao = int.Parse(dtRow["SoSao"].ToString());
                     cauTraLoiDto.SoNguoiBinhChon = int.Parse(dtRow["SoNguoiBinhChon"].ToString());
                     cauTraLoiDto.BaoCaoViPham = int.Parse(dtRow["BaoCaoVipham"].ToString());
-                    cauTraLoiDto.GhiChu = dtRow["GhiChu"].ToString();
+
+                    try
+                    {
+                        cauTraLoiDto.GhiChu = dtRow["GhiChu"].ToString();
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.GhiChu = "";
+                    }
                     cauTraLoiDto.NoiDung = dtRow["NoiDung"].ToString();
                     cauTraLoiDto.MaCauHoi = int.Parse(dtRow["MaCauHoi"].ToString());
                     cauTraLoiDto.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString());
                     cauTraLoiDto.DaXoa = int.Parse(dtRow["DaXoa"].ToString());
-                    cauTraLoiDto.LyDo = dtRow["LyDo"].ToString();
+                    try
+                    {
+                        cauTraLoiDto.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.LyDo = "";
+                    }
                     try
                     {
                         cauTraLoiDto.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
                     }
-                    catch (Exception e)
+                    catch
                     {
                         cauTraLoiDto.NgayXoa = DateTime.Parse("1/1/1900");
                     }
-                    cauTraLoiDto.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString());
+                    try
+                    {
+                        cauTraLoiDto.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString());
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.NguoiXoa = 0;
+                    }
                     try
                     {
                         cauTraLoiDto.NgayCapNhat = DateTime.Parse(dtRow["NgayCapNhat"].ToString());
                     }
-                    catch (Exception e)
+                    catch
                     {
                         cauTraLoiDto.NgayCapNhat = DateTime.Parse("1/1/1900");
                     }
-                    cauTraLoiDto.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString());
+                    try
+                    {
+                        cauTraLoiDto.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString());
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.NguoiCapNhat = 0;
+                    }
 
                     lstCauTraLoi.Add(cauTraLoiDto);
-                    
+
                 }
             }
             catch (Exception e)

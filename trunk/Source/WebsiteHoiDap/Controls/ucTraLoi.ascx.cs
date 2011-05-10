@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using WebsiteHoiDap.BUS;
-using WebsiteHoiDap.BUS.CauHoi;
+//using WebsiteHoiDap.BUS.CauHoi; -- Edit by : Anh Vũ
 
 namespace WebsiteHoiDap.Controls
 {
@@ -49,7 +49,8 @@ namespace WebsiteHoiDap.Controls
                 }
                 else
                 {
-                    frmKetQuaDatTraLoi.Visible = true;
+                    //Edit by : Anh Vũ
+                    frmKetQuaTraLoi.Visible = true;
                     lblKetQuaTraLoi.Text = "Đăng câu trả lời bị lỗi";
                 }
 

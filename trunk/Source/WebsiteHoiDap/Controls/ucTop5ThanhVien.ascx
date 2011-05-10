@@ -1,12 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucTop5ThanhVien.ascx.cs" Inherits="WebsiteHoiDap.Controls.ucTop5ThanhVien" %>
 
- <asp:GridView ID="grvTọpThanhVien" runat="server" AllowPaging="false" ShowHeader="true" 
-        ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" 
-            BorderStyle="None" onselectedindexchanged="grvTop5ThanhVien_SelectedIndexChanged">
+
+<%--Edit by : Anh Vũ--%>
+<asp:Panel ID = "idTop5ThanhVien" runat = "server">
+<div class="content-list-question">
+        <asp:GridView ID="grvTop5ThanhVien" runat="server" AllowPaging="false" ShowHeader="true" 
+        ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" BorderStyle="None">
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
-                    <span class="link-3"><a href="#"> Top 5 thanh vien </a></span>
+                    <span class="link-3"><a href="#"> Top 5 Thành Viên : </a></span>
                 </HeaderTemplate>                
                 <ItemTemplate>
                     <span class="link-3"><a href="#"> <%# Eval("TenTaiKhoan") %> </a></span>
@@ -14,4 +17,6 @@
             </asp:TemplateField>
         </Columns>      
             
-</asp:GridView>     >
+        </asp:GridView>
+    </div>
+    </asp:Panel>

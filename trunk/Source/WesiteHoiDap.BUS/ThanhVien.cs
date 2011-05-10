@@ -342,21 +342,36 @@ namespace WebsiteHoiDap.BUS
                     {
                         kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
                     }
-                    catch (Exception e)
+                    catch
                     {
                         kq.NgayXoa = DateTime.Parse("1/1/1900");
                     }
-                    kq.LyDo = dtRow["LyDo"].ToString();
+                    //Anh Vũ -- Thêm điều kiện kiểm tra vì LyDo có thể null
+                    try
+                    {
+                        kq.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        kq.LyDo = "";
+                    }
                     try
                     {
                         kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
                     }
-                    catch (Exception e)
+                    catch
                     {
                         kq.NgayXoa = DateTime.Parse("1/1/1900");
-                        throw e;
                     }
-                    kq.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    //Anh Vũ -- Thêm điều kiện kiểm tra vì NguoiXoa có thể null
+                    try
+                    {
+                        kq.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        kq.NguoiXoa = 0;
+                    }
 
                     res.Add(kq);
                 }

@@ -114,6 +114,20 @@
     <Compile Include="Controls\ucDanhSachCauHoi.ascx.designer.cs">
       <DependentUpon>ucDanhSachCauHoi.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ucDSCauHoiCuaThanhVien.ascx.cs">
+      <DependentUpon>ucDSCauHoiCuaThanhVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDSCauHoiCuaThanhVien.ascx.designer.cs">
+      <DependentUpon>ucDSCauHoiCuaThanhVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucDSCauTraLoiCuaThanhVien.ascx.cs">
+      <DependentUpon>ucDSCauTraLoiCuaThanhVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucDSCauTraLoiCuaThanhVien.ascx.designer.cs">
+      <DependentUpon>ucDSCauTraLoiCuaThanhVien.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ucTaiKhoan.ascx.cs">
       <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,6 +287,8 @@
     <Content Include="Controls\ucDatCauHoi.ascx" />
     <Content Include="Controls\ucDoiMatKhau.ascx" />
     <Content Include="Controls\ucDanhSachCauHoi.ascx" />
+    <Content Include="Controls\ucDSCauHoiCuaThanhVien.ascx" />
+    <Content Include="Controls\ucDSCauTraLoiCuaThanhVien.ascx" />
     <Content Include="Controls\ucTaiKhoan.ascx" />
     <Content Include="Controls\ucThongTinHoatDong.ascx" />
     <Content Include="Controls\ucThongTinTaiKhoan.ascx" />
