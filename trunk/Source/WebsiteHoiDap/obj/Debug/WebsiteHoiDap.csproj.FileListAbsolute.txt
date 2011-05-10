@@ -33,3 +33,10 @@ C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\bin\WesiteHoiDap.BU
 C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
 C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\bin\WebsiteHoiDap.dll
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\bin\WebsiteHoiDap.pdb
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
