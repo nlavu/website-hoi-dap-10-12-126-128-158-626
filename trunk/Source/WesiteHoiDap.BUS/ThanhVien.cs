@@ -338,14 +338,9 @@ namespace WebsiteHoiDap.BUS
                     kq.Diem = int.Parse(dtRow["Diem"].ToString().Trim());
                     kq.CapBac = int.Parse(dtRow["CapBac"].ToString().Trim());
                     kq.MaLoaiTV = int.Parse(dtRow["MaLoaiTV"].ToString().Trim());
-                    try
-                    {
-                        kq.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
-                    }
-                    catch
-                    {
-                        kq.NgayXoa = DateTime.Parse("1/1/1900");
-                    }
+
+                    kq.DaXoa = int.Parse(dtRow["DaXoa"].ToString());
+                    
                     //Anh Vũ -- Thêm điều kiện kiểm tra vì LyDo có thể null
                     try
                     {
@@ -363,6 +358,7 @@ namespace WebsiteHoiDap.BUS
                     {
                         kq.NgayXoa = DateTime.Parse("1/1/1900");
                     }
+                    
                     //Anh Vũ -- Thêm điều kiện kiểm tra vì NguoiXoa có thể null
                     try
                     {

@@ -394,3 +394,9 @@ td#nav.active a, td#nav :hover{
 {
 	background: #F8FAEF;	
 }
+/*~~Thu Hà 10/5/2011~~*/
+.message
+{
+	color:Red;
+	font-size:12px;
+}

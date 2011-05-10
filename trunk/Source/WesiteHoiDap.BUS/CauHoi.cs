@@ -18,14 +18,14 @@ namespace WebsiteHoiDap.BUS
             get { return intMaCauHoi; }
             set { intMaCauHoi = value; }
         }
-        DateTime dtmNgayHoi = DateTime.Parse("1/1/1990");
+        DateTime dtmNgayHoi = DateTime.Parse("1/1/1900");
 
         public DateTime NgayHoi
         {
             get { return dtmNgayHoi; }
             set { dtmNgayHoi = value; }
         }
-        DateTime dtmNgayHetHan = DateTime.Parse("1/1/1990");
+        DateTime dtmNgayHetHan = DateTime.Parse("1/1/1900");
 
         public DateTime NgayHetHan
         {

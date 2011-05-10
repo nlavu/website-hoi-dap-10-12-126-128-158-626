@@ -14,13 +14,13 @@ namespace WebsiteHoiDap.Controls {
     public partial class ucTop5ThanhVien {
         
         /// <summary>
-        /// idTop5ThanhVien control.
+        /// pnlTop5ThanVien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel idTop5ThanhVien;
+        protected global::System.Web.UI.WebControls.Panel pnlTop5ThanVien;
         
         /// <summary>
         /// grvTop5ThanhVien control.
@@ -30,5 +30,13 @@ namespace WebsiteHoiDap.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grvTop5ThanhVien;
+
+        /// <summary>
+        /// grvTop5ThanhVien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>        
     }
 }

@@ -166,26 +166,40 @@ namespace WebsiteHoiDap.BUS
                     }
                     catch
                     {
-                        cauTraLoiDto.LyDo = dtRow["LyDo"].ToString();
+                        cauTraLoiDto.LyDo = "";
                     }
                     try
                     {
                         cauTraLoiDto.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
                     }
-                    catch (Exception e)
+                    catch 
                     {
                         cauTraLoiDto.NgayXoa = DateTime.Parse("1/1/1900");
                     }
-                    cauTraLoiDto.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString());
+                    try
+                    {
+                        cauTraLoiDto.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString());
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.NguoiXoa = int.MinValue;
+                    }
                     try
                     {
                         cauTraLoiDto.NgayCapNhat = DateTime.Parse(dtRow["NgayCapNhat"].ToString());
                     }
-                    catch (Exception e)
+                    catch 
                     {
                         cauTraLoiDto.NgayCapNhat = DateTime.Parse("1/1/1900");
                     }
-                    cauTraLoiDto.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString());
+                    try
+                    {
+                        cauTraLoiDto.NguoiCapNhat = int.Parse(dtRow["NguoiCapNhat"].ToString());
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.NguoiCapNhat = int.MinValue;
+                    }
                     
                     lstCauTraLoi.Add(cauTraLoiDto);
                 }
@@ -270,7 +284,7 @@ namespace WebsiteHoiDap.BUS
                     {
                         cauTraLoiDto.NgayCapNhat = DateTime.Parse(dtRow["NgayCapNhat"].ToString());
                     }
-                    catch
+                    catch 
                     {
                         cauTraLoiDto.NgayCapNhat = DateTime.Parse("1/1/1900");
                     }

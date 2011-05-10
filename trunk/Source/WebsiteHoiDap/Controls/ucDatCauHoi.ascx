@@ -1,8 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucDatCauHoi.ascx.cs" Inherits="WebsiteHoiDap.Controls.ucDatCauHoi" %>
 
 
-<asp:Panel ID="idDatCauHoi" runat="server">
-<form id="frmKetQuaDatCauHoi" runat="server" >
+<asp:Panel ID="pnlKetQuaDatCauHoi" runat="server">
 <div class="itemWrapper">
 	<div class="item">
    	 	<div class="itemContent">
@@ -13,22 +12,26 @@
          </div>
      </div>
 </div>
-</form>
-  <form runat="server" action="" method="get" ID="frmDatCauHoi">
+</asp:Panel>
+<asp:Panel ID="pnlDatCauHoi" runat="server">
       <div class="itemWrapper">
   		    <div class="item">
        	 	    <div class="itemContent">
            	      <div class="itemTitle">(1) Câu hỏi của bạn</div>
                   <div class="boxContentMain">                        
-                    <table width="100%" border="0">
+                    <table width="100%" border="0" cellpadding="5">
                       <tr>
                         <td>
-                    	    <asp:TextBox TextMode="MultiLine" runat="Server" cols="70" rows="3" ID="txtCauHoi">Câu hỏi ....</asp:TextBox>
+                    	    <asp:TextBox TextMode="MultiLine" runat="Server" ID="txtCauHoi" Rows="5" Columns="70"></asp:TextBox>
+                    	    
                         </td>
                       </tr>
                       <tr>
                         <td>
-                   	    <asp:TextBox TextMode="MultiLine" runat="Server" cols="70" rows="5" ID="txtGhiChu">Ghi chú thêm ....</asp:TextBox>
+                            <br />
+                    	    <strong> Ghi Chú: </strong>
+                    	    <br />
+                   	        <asp:TextBox TextMode="MultiLine" runat="Server" ID="txtGhiChu" Rows="5" Columns="70" ></asp:TextBox>
                    	    </td>
                       </tr>
                     </table>                       	
@@ -65,8 +68,11 @@
                   <div class="boxContentMain">                        
                 	    <table width="100%" border="0">
                           <tr>
-                            <td><label for="CalenderNgayHetHan"></label>
-                               
+                            <td>
+                                <asp:CheckBox ID="chkNgayHetHan" runat="server" 
+                                    Text="Câu hỏi có giới hạn thời gian trả lời." 
+                                    oncheckedchanged="chkNgayHetHan_CheckedChanged" />
+                                <br />
                                 <asp:Calendar ID="CalenderNgayHetHan" runat="server" Height="200px" 
                                     Width="220px" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" 
                                     DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
@@ -80,19 +86,21 @@
                                     <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
                                         ForeColor="#FFFFCC" />
                                 </asp:Calendar>
+                                
                               </td>
                             <td>&nbsp;</td>
                           </tr>
                           <tr>
-                            <td><asp:Button runat="server" ID="Button1" text="Xem trước" />
-                            <asp:Button runat="server" ID="Button2" Text="Gửi câu hỏi" 
-                                    onclick="btnSubmit_Click" /></td>
+                            <td>
+                            <asp:Button runat="server" ID="btnXemTruoc" text="Xem trước" />
+                            <asp:Button runat="server" ID="btnGuiCauHoi" Text="Gửi câu hỏi" 
+                                    onclick="btnGuiCauHoi_Click" />
+                            </td>
                           </tr>
                         </table>                       	
                   </div>
        	 	    </div>
   		    </div>
-      </div>
-  </form>  
+      </div> 
   <!--end Đặt câu hỏi-->
 </asp:Panel>
