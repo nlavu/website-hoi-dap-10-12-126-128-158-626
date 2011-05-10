@@ -1,14 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucTaiKhoan.ascx.cs" Inherits="WebsiteHoiDap.Controls.ucTaiKhoan" %>
 
 
-<asp:Panel ID="idTaiKhoan" runat="server">
+<asp:Panel ID="pnlTaiKhoan" runat="server">
     <div class="boxWrapper">
     	<div class="box">
         	<div class="boxContent">
             	<div class="boxTitle">
                 Tài khoản</div>
                 <div class="boxContentMain">
-                	<form action="" method="post" name="frmDangNhap">
+                	
                         <table width="100%" border="0" cellpadding="2">
                           <tr>
                             <td width="27%" align="center" valign="middle">
@@ -25,7 +25,7 @@
                             <td align="center"><input name="btnDangXuat" type="submit" value="Đăng xuất" id="btnDangXuat" /></td>
                           </tr>
                         </table>
-                    </form>	
+                    
                 </div>
             </div>
         </div>            	

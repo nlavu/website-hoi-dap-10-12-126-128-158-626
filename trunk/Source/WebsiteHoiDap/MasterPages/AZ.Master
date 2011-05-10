@@ -17,13 +17,8 @@
     </script>
 </head>
 <body>
-<<<<<<< .mine
 <form runat="server">
     <div class="wrapper">
-=======
-<form runat="server">
-<div class="wrapper">
->>>>>>> .r33
       <div class="header">
       	       
       </div>
@@ -97,10 +92,8 @@
       <!-- end .footer -->
   </div>
   <!-- end .wrapper -->
-<<<<<<< .mine
+
 </form>
-=======
-  </form>
->>>>>>> .r33
+
 </body>
 </html>

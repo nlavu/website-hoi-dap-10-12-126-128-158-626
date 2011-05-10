@@ -14,12 +14,12 @@ namespace WebsiteHoiDap.Controls {
     public partial class ucDangNhap {
         
         /// <summary>
-        /// idDangNhap control.
+        /// pnlDangNhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel idDangNhap;
+        protected global::System.Web.UI.WebControls.Panel pnlDangNhap;
     }
 }
