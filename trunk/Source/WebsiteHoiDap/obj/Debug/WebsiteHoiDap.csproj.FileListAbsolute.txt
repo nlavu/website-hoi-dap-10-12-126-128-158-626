@@ -5,13 +5,6 @@ D:\Project\NMCNPM\WebsiteHoiDap\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
 D:\Project\NMCNPM\WebsiteHoiDap\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
 D:\Project\NMCNPM\WebsiteHoiDap\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
 D:\Project\NMCNPM\WebsiteHoiDap\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WebsiteHoiDap.dll
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WebsiteHoiDap.pdb
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\bin\WebsiteHoiDap.dll
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\bin\WebsiteHoiDap.pdb
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
@@ -43,3 +36,10 @@ C:\Users\Anh Vu\Desktop\New folder\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.
 D:\Project\Do An NMCNPM\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
 D:\Project\Do An NMCNPM\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
 D:\Project\Do An NMCNPM\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WebsiteHoiDap.dll
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WebsiteHoiDap.pdb
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb

@@ -13,11 +13,9 @@
         	<a href="#"><img src="image/profile_48c.png" width="100" height="100" /></a>                  	<span class="link-2"><a href="#">Tên tài khoản</a></span>
         </td>
         <td width="45%">
-       	  <p>Họ tên ......................</p>
-       	  <p>Ngày sinh ........... - Giới tính .............</p>
-   		  <p>Email ...................</p>
-   		  <p>Số điện thoại ...........................</p>
-       	  <p>Địa chỉ ...........................</p>
+       	  <p>Họ tên: <asp:Label ID="lblHoTen" runat="server"></asp:Label></p>
+       	  <p>Ngày sinh: <asp:Label ID="lblNgaySinh" runat="server"></asp:Label> - Giới tính: <asp:Label ID="lblGioiTinh" runat="server"></asp:Label><p>
+   		  <p>Email: <asp:Label ID="lblEmail" runat="server"></asp:Label></p>
          	<p class="link-3"><a href="CapNhatThongTinCaNhan.aspx">&gt;&gt; Cập nhật thông tin cá nhân</a></p>
           	<p class="link-3"><a href="DoiMatKhau.aspx">&gt;&gt; Đổi mật khẩu</a></p>
         </td>
@@ -26,7 +24,7 @@
             <th>Cấp Bậc - Điểm số</th>
           </tr>
           <tr>
-            <td bgcolor="#DAF8DE"><span class="link-3">xxxx</span> điểm - Cấp bậc <span class="link-3">xxxx</span> [ hình kèm theo]</td>
+            <td bgcolor="#DAF8DE"><span class="link-3"><asp:Label ID="lblDiem" runat="server"></asp:Label></span> điểm - Cấp bậc: <span class="link-3"><asp:Label ID="lblCapBac" runat="server"></asp:Label></span> [ hình kèm theo]</td>
           </tr>
           <tr>
             <td bgcolor="#DAF8DE">Còn <span class="link-3">xxxx</span> điểm để tăng bậc.</td>

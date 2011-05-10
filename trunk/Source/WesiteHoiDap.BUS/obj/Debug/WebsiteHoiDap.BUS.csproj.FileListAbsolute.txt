@@ -3,11 +3,6 @@ D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
 D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
 D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
 D:\Project\NMCNPM\WebsiteHoiDap\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
-C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
 E:\Nam 3\HOC KY II\NHAP MON CNPM\BAI TAP\WEBSITE HOI DAP\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
@@ -28,3 +23,8 @@ C:\Users\Anh Vu\Desktop\New folder\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDa
 C:\Users\Anh Vu\Desktop\New folder\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\New folder\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
 C:\Users\Anh Vu\Desktop\New folder\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
+C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
