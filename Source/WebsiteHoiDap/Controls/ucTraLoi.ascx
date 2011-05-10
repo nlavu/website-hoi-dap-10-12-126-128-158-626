@@ -6,10 +6,8 @@
 // ]]>
 </script>
 
-
-<asp:Panel ID="idTraLoi" runat="server">
-<form id = "frmKetQuaTraLoi" runat = "server">
-    <div class="itemWrapper">
+<asp:Panel ID="pnlKetQuaTraLoi" runat="server">
+ <div class="itemWrapper">
 	    <div class="item">
    	 	    <div class="itemContent">
        	      <div class="itemTitle">Thông báo</div>
@@ -19,9 +17,9 @@
              </div>
          </div>
     </div>
-</form>
+</asp:Panel>
 
-<form runat = "server" action = "" method = "get" ID = "frmCauTraLoi">
+<asp:Panel ID="pnlTraLoi" runat="server">
     <div class="itemWrapper">
   		    <div class="item">
        	 	    <div class="itemContent">
@@ -30,12 +28,12 @@
                     <table width="100%" border="0">
                       <tr>
                         <td>
-                    	    <asp:TextBox TextMode="MultiLine" runat="Server" cols="70" rows="3" ID="TextBox1">Câu hỏi ....</asp:TextBox>
+                    	    <asp:Label runat="Server" ID="lblCauHoi" Width="100%"></asp:Label>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                   	        <asp:TextBox TextMode="MultiLine" runat="Server" cols="70" rows="5" ID="TextBox2">Ghi chú ....</asp:TextBox>
+                   	        <asp:Label runat="Server" ID="lblGhiChuCauHoi" Width="100%"></asp:Label>
                    	    </td>
                       </tr>
                     </table>                       	
@@ -48,25 +46,30 @@
     <div class="itemWrapper">
   		    <div class="item">
        	 	    <div class="itemContent">
-           	      <div class="itemTitle">(3) Câu trả lời của bạn là.</div>                  
-  				    <form runat = "server" id ="frmTraLoiCauHoi">
+           	      <div class="itemTitle">(3) Câu trả lời của bạn là.</div> 
                 	    <table width="100%" border="0">
                           <tr>
                             <td>
-                        	    <textarea name="txtCauTraLoi" cols="70" rows="10">Câu trả lời ....</textarea>
+                        	    <asp:TextBox TextMode="MultiLine" runat="server" ID="txtCauTraLoi" Columns="70" Rows="10">Câu trả lời ....</asp:TextBox>
+                   		    </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                Ghi chú:
+                                <br />
+                        	    <asp:TextBox TextMode="MultiLine" runat="server" ID="txtGhiChu" Columns="70" Rows="5"></asp:TextBox>
                    		    </td>
                           </tr>
                           <tr>
                             <td>  
-                        	    <input name="btnXemTruoc" type="button" value="Xem Trước" />
-                       		    &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="btnGuiCauTraLoi" id="btnGuiCauTraLoi" value="Gửi Câu Trả Lời" onclick="return btnGuiCauTraLoi_onclick()" /></td>
+                        	    <asp:Button ID="btnXemTruoc" Text="Xem Trước" runat="server"/>
+                       		    &nbsp;&nbsp;&nbsp;&nbsp;
+                       		    <asp:Button ID="btnGuiCauTraLoi" Text="Gửi Câu Trả Lời" runat="server" 
+                                    onclick="btnGuiCauTraLoi_Click" /></td>
                           </tr>
-                        </table>
-               	    </form>               	
+                        </table>               	            	
                 </div>
        	 	</div>
     </div>
-</form>
-
     <!--end .item trả lời câu hỏi --> 
 </asp:Panel>

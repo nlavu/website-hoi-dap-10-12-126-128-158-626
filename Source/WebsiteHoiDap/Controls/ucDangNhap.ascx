@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucDangNhap.ascx.cs" Inherits="WebsiteHoiDap.Controls.ucDangNhap" %>
 
-<asp:Panel ID="idDangNhap" runat="server">
+<asp:Panel ID="pnlDangNhap" runat="server">
     <div class="boxWrapper">
 	    <div class="box">
     	    <div class="boxContent">
@@ -8,7 +8,7 @@
                 Đăng nhập
                 </div>
                 <div class="boxContentMain">
-            	    <form action="" method="post" name="frmDangNhap">
+            	    
                         <table width="100%" border="0" cellpadding="2">
                           <tr>
                             <td width="53%" align="right"><label for="txtTenDangNhap">Tên đăng nhập:</label></td>
@@ -27,7 +27,7 @@
                                 <a href="DangKy.aspx">Đăng ký mới</a></td>
                           </tr>
                         </table>
-                    </form>	
+                                            
                 </div>
             </div>
         </div>            	

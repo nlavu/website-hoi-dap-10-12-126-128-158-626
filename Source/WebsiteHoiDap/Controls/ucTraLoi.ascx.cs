@@ -18,44 +18,56 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            frmKetQuaTraLoi.Visible = false;
+            pnlKetQuaTraLoi.Visible = false;
+            pnlTraLoi.Visible = true;
+            // giả sử mã câu hỏi đang trả lời là 1
+            int intMaCauHoi = 1;
+            WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
+            cauHoi = cauHoi.LayCauHoiTheoMa(intMaCauHoi);
+
+            lblCauHoi.Text = cauHoi.NoiDungCauHoi;
+            lblGhiChuCauHoi.Text = cauHoi.GhiChu;
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
+       
+        protected void btnGuiCauTraLoi_Click(object sender, EventArgs e)
+        {            
             WebsiteHoiDap.BUS.CauTraLoi cauTraLoi = new WebsiteHoiDap.BUS.CauTraLoi();
 
-            cauHoi.NoiDungCauHoi = txtCauHoi.Text;
-            cauHoi.GhiChu = txtGhiChu.Text;
+            
             cauTraLoi.NoiDung = txtCauTraLoi.Text;
- 
-            if (cauHoi.NoiDungCauHoi == "")
-            {
-                frmKetQuaTraLoi.Visible = true;
-                lblKetQuaTraLoi.Text = "Chưa nhập nội dung câu hỏi!";
-            }
+            cauTraLoi.GhiChu = txtGhiChu.Text;
 
+            if (cauTraLoi.NoiDung == "")
+            {
+                pnlKetQuaTraLoi.Visible = true;
+                lblKetQuaTraLoi.Text = "<span class='message'>Chưa nhập nội dung câu hỏi!</span>";
+                txtCauTraLoi.Focus();
+                return;
+            }
+            cauTraLoi.MaCauHoi = 1; //tạm thời
+            cauTraLoi.MaThanhVien = 1;  //tạm thời
+            cauTraLoi.NgayTraLoi = DateTime.Now;
+            cauTraLoi.SoNguoiBinhChon = 0;
+            cauTraLoi.SoSao = 0;
+            cauTraLoi.BaoCaoViPham = 0;
+            cauTraLoi.DaXoa = 0;
+            
+            int kq;
+            kq = cauTraLoi.ThemCauTraLoi();
+            if (kq == 1)
+            {
+                pnlKetQuaTraLoi.Visible = true;
+                lblKetQuaTraLoi.Text = "Đăng câu trả lời thành công!";
+                pnlKetQuaTraLoi.Height = 200;
+
+                pnlTraLoi.Visible = false;
+            }
             else
             {
-                int kq;
-                kq = cauTraLoi.ThemCauTraLoi();
-                if (kq == 1)
-                {
-                    //frmKetQuaTraLoi.Visible = true;
-                    //lblKetQuaTraLoi.Text = "Đăng câu trả lời thành công!";
-                    //frmTraLoiCauHoi.Visible = false;
-                }
-                else
-                {
-                    //frmKetQuaDatTraLoi.Visible = true;
-                    //lblKetQuaTraLoi.Text = "Đăng câu trả lời bị lỗi";
-                }
-
-            }
-
-
-        }
-   
+                pnlKetQuaTraLoi.Visible = true;
+                lblKetQuaTraLoi.Text = "<span class='message'>Đăng câu trả lời bị lỗi</span>";
+            }            
+        }   
     }
 }

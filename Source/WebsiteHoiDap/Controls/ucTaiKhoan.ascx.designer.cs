@@ -14,12 +14,12 @@ namespace WebsiteHoiDap.Controls {
     public partial class ucTaiKhoan {
         
         /// <summary>
-        /// idTaiKhoan control.
+        /// pnlTaiKhoan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel idTaiKhoan;
+        protected global::System.Web.UI.WebControls.Panel pnlTaiKhoan;
     }
 }

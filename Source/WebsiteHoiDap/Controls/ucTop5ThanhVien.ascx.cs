@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using WebsiteHoiDap.BUS;
+using System.Collections.Generic;
 
 
 namespace WebsiteHoiDap.Controls
@@ -21,8 +22,15 @@ namespace WebsiteHoiDap.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             ThanhVien thanhVien = new ThanhVien();
+            List<ThanhVien> lstThanhVien = thanhVien.LayDSThanhVien();
+            List<ThanhVien> lstTop5 = new List<ThanhVien>();
+            
+            for (int i = 0; i < 5; i++)
+            {
+                lstTop5.Add(lstThanhVien[i]);               
+            }
 
-            this.grvTop5ThanhVien.DataSource = thanhVien.LayDSThanhVien();
+            this.grvTop5ThanhVien.DataSource = lstTop5;
             this.grvTop5ThanhVien.DataBind();
          } 
     }
