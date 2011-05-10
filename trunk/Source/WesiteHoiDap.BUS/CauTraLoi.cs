@@ -160,7 +160,14 @@ namespace WebsiteHoiDap.BUS
                     cauTraLoiDto.MaCauHoi = int.Parse(dtRow["MaCauHoi"].ToString());
                     cauTraLoiDto.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString());
                     cauTraLoiDto.DaXoa = int.Parse(dtRow["DaXoa"].ToString());
-                    cauTraLoiDto.LyDo = dtRow["LyDo"].ToString();
+                    try
+                    {
+                        cauTraLoiDto.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        cauTraLoiDto.LyDo = dtRow["LyDo"]
+                    }
                     try
                     {
                         cauTraLoiDto.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
@@ -172,7 +179,7 @@ namespace WebsiteHoiDap.BUS
                     cauTraLoiDto.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString());
                     try
                     {
-                    cauTraLoiDto.NgayCapNhat = DateTime.Parse(dtRow["NgayCapNhat"].ToString());
+                        cauTraLoiDto.NgayCapNhat = DateTime.Parse(dtRow["NgayCapNhat"].ToString());
                     }
                     catch (Exception e)
                     {
