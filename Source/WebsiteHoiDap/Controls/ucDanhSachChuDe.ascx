@@ -3,7 +3,8 @@
 <form runat="server">
    <div class="top">
         <asp:GridView ID="grvChuDe" runat="server" AllowPaging="false" ShowHeader="true" 
-        ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" BorderStyle="None">
+        ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" 
+            BorderStyle="None" onselectedindexchanged="grvChuDe_SelectedIndexChanged">
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>

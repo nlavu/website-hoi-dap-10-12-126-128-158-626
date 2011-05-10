@@ -14,12 +14,12 @@ namespace WebsiteHoiDap.Controls {
     public partial class ucTop5ThanhVien {
         
         /// <summary>
-        /// idTop5ThanhVien control.
+        /// grvTọpThanhVien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel idTop5ThanhVien;
+        protected global::System.Web.UI.WebControls.GridView grvTọp5ThanhVien;
     }
 }

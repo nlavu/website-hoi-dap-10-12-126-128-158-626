@@ -22,5 +22,10 @@ namespace WebsiteHoiDap.Controls
             this.grvChuDe.DataSource = chuDe.LayDSChuDe();
             this.grvChuDe.DataBind();
         }
+
+        protected void grvChuDe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

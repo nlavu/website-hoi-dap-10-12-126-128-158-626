@@ -23,3 +23,8 @@ C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WesiteHoiDap.BUS\bin\Debug\Wesite
 C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
 C:\Users\Anh Vu\Desktop\HoiDap_8-5-2011\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
+D:\Khac Anh\MON HOC\NhapmonCNPM\WebsiteHoiDap\website-hoi-dap-10-12-126-128-158-626\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
