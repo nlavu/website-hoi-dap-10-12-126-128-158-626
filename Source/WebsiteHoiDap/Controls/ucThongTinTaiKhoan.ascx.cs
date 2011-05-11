@@ -19,7 +19,7 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int IDUser = 2;
+            int IDUser = 1;
             ThanhVien thanhVien = new ThanhVien();
             thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
 

@@ -246,7 +246,7 @@ namespace WebsiteHoiDap.BUS
                 dtThanhVien = SqlDataAccessHelper.ExecuteQuery("spLayThongTinThanhVienTheoMa", lstParam);
                 foreach (DataRow dtRow in dtThanhVien.Rows)
                 {
-                    //res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
+                    res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
                     res.TenTaiKhoan = dtRow["TenTaiKhoan"].ToString();
                     res.MatKhau = dtRow["MatKhau"].ToString();
                     res.HoTen = dtRow["HoTen"].ToString();
