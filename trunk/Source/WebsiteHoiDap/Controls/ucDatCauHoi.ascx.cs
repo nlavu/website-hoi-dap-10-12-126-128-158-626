@@ -27,6 +27,8 @@ namespace WebsiteHoiDap.Controls
             pnlKetQuaDatCauHoi.Visible = false;
             chkNgayHetHan.Checked = false;
             CalenderNgayHetHan.Visible = false;
+
+            txtCauHoi.Text = Request.QueryString["noidungcauhoi"];                       
           
         }
 

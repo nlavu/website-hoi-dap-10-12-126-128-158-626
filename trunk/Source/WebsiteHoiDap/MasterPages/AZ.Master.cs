@@ -19,5 +19,21 @@ namespace WebsiteHoiDap.MasterPages
         {
 
         }
+
+        protected void imgbtnDatCauHoi_Click(object sender, ImageClickEventArgs e)
+        {
+            string URL = "DatCauHoi.aspx?noidungcauhoi=";
+            URL += txtDatCauHoi.Text;
+            Response.Redirect(URL);
+        }
+
+        protected void imgbtnTimKiem_Click(object sender, ImageClickEventArgs e)
+        {
+            string URL = "TimKiem.aspx?q=";
+            URL += txtTimKiem.Text;
+            Response.Redirect(URL);
+        }
+
+       
     }
 }
