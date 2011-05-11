@@ -23,9 +23,9 @@ namespace WebsiteHoiDap.Controls
             ThanhVien thanhVien = new ThanhVien();
             thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
 
-            idTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
-            idDiem.Text = thanhVien.Diem.ToString();
-            idCapBac.Text = thanhVien.CapBac.ToString();
+            lblTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
+            lblDiem.Text = thanhVien.Diem.ToString();
+            lblCapBac.Text = thanhVien.CapBac.ToString();
 
         }
 

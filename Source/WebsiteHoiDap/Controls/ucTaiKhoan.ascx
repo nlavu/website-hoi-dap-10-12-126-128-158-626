@@ -2,7 +2,7 @@
 
 
 <asp:Panel ID="pnlTaiKhoan" runat="server">
-    <div class="boxWrapper">
+        <div class="boxWrapper">
     	<div class="box">
         	<div class="boxContent">
             	<div class="boxTitle">
@@ -15,14 +15,24 @@
                             	<img src="image/profile_48c.png" width="48" height="48" />
                             </td>
                             <td width="73%">
-                                Chào bạn <span class="link-3"><a href="#">ABC</a></span><br />
-                                Bạn đã đạt <span class="link-3"><a href="#">123</a></span> điểm <br />
-                             	Cấp bậc: <span class="link-3"><a href="#">1</a></span>
+                                Chào bạn <asp:Label ID="lblTenTaiKhoan" runat="server" Text=""> <span class="link-3"><a href="#">ABC</a></span></asp:Label><br />
+                                Bạn đã đạt 
+                                    <asp:Label ID="lblDiem" runat="server">
+                                    <span class="link-3"><a href="#"></a></span>
+                                    </asp:Label> điểm <br />
+                             	Cấp bậc: 
+                             	    <asp:Label runat="server" ID="lblCapBac">
+                             	        <span class="link-3"><a href="#"></a></span>
+                             	    </asp:Label>
+                             	 <br />
+                             	    <asp:Button runat="server" ID="btnDangXuat" />
                             </td>
                           </tr>
                           <tr>
                             <td>&nbsp;</td>
-                            <td align="center"><input name="btnDangXuat" type="submit" value="Đăng xuất" id="btnDangXuat" /></td>
+                            <td align="center">        
+                                                                            
+                            </td>
                           </tr>
                         </table>
                     
