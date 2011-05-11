@@ -236,8 +236,7 @@ namespace WebsiteHoiDap.BUS
         /// <returns><ThanhVien></returns>
         public ThanhVien LayThongTinThanhVienTheoMa(int intMaThanhVien)
         {
-            ThanhVien res = new ThanhVien();
-
+            ThanhVien res = new ThanhVien();            
             try
             {
                 // add tham số
@@ -247,7 +246,7 @@ namespace WebsiteHoiDap.BUS
                 dtThanhVien = SqlDataAccessHelper.ExecuteQuery("spLayThongTinThanhVienTheoMa", lstParam);
                 foreach (DataRow dtRow in dtThanhVien.Rows)
                 {
-                    //res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim()); -- Edit by: Anh Vu
+                    res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
                     res.TenTaiKhoan = dtRow["TenTaiKhoan"].ToString();
                     res.MatKhau = dtRow["MatKhau"].ToString();
                     res.HoTen = dtRow["HoTen"].ToString();
@@ -271,7 +270,7 @@ namespace WebsiteHoiDap.BUS
                     {
                         res.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
                     }
-                    catch (Exception e)
+                    catch
                     {
                         res.NgayXoa = DateTime.Parse("1/1/1900");
                     }
@@ -285,10 +284,9 @@ namespace WebsiteHoiDap.BUS
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                res = null;
-                //throw e;
+                
             }
 
             return res;
