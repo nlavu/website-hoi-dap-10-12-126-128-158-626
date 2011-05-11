@@ -262,13 +262,6 @@
     <Compile Include="TraLoi.aspx.designer.cs">
       <DependentUpon>TraLoi.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ucTaiKhoan.ascx.cs">
-      <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ucTaiKhoan.ascx.designer.cs">
-      <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\AZ.Master" />
@@ -303,7 +296,6 @@
     <Content Include="Controls\ucTraLoi.ascx" />
     <Content Include="DuyetChuDe.aspx" />
     <Content Include="GioiThieu.aspx" />
-    <Content Include="ucTaiKhoan.ascx" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
