@@ -9,12 +9,7 @@
     <!--end attach css-->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <script type="text/javascript" >
-        function submitDatCauHoi()
-        {
-            frmDatCauHoi.submit();
-        }
-    </script>
+ 
 </head>
 <body>
 <form runat="server">
@@ -36,12 +31,14 @@
                     </tr>
                   </table>
             </td>
-            <td width="35%" align="left">
-            	<form id="frmTimKiem" name="frmTimKiem" method="post" action="">
-            	  <label for="txtTimKiem"></label>
-            	  <input name="txtTimKiem" type="text" id="txtTimKiem" size="30" maxlength="100" />
-                  <input type="submit" name="btnTimKiem" id="btnTimKiem" value="Tìm kiếm" />
-           	  </form>
+            <td width="25%" align="right" valign="middle">            	
+            	  <!--tìm kiếm-->
+            	  <asp:TextBox ID="txtTimKiem" TextMode="SingleLine" runat="server" Width="200px"></asp:TextBox>                  
+       	   </td>
+       	   <td width="10%" align="left" valign="middle">            	
+            	 <asp:ImageButton ID="imgbtnTimKiem" runat="server" Width="25" Height="25" 
+                     ImageUrl="~/image/icon_search.gif" onclick="imgbtnTimKiem_Click" />
+           	     <!--end tìm kiếm-->
        	   </td>
           </tr>
         </table>
@@ -51,18 +48,19 @@
       <div class="content">
         <div class="left">
           <div class="question">
-            <form action="~/DatCauHoi.aspx" method="post" id="frmDatCauHoi">
+            
                 <table>
                     <tr valign="middle">
                         <td>
-                            <input name="txtCauHoi" type="text" value="" size="50" />
+                            <asp:TextBox TextMode="SingleLine" runat="server" ID="txtDatCauHoi" Width="400px"/>
                         </td>
                         <td>
-                            <img height="50px" width="50px" src="image/question.jpg" onclick="submitDatCauHoi()" />       
+                            <asp:ImageButton runat="server" ID="imgbtnDatCauHoi" Height="50px" Width="50px" 
+                                ImageUrl="~/image/question.jpg" onclick="imgbtnDatCauHoi_Click" />       
                         </td>
                     </tr>
                 </table>            
-             </form>    	         	 
+                 	         	 
           </div>
           <!--end .item dat cau hoi -->
 		  <div class="bread-crumb">          		
