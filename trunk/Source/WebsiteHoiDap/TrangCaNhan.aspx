@@ -30,28 +30,14 @@
     <!--end header ds câu hỏi-->
     <div>
         <UC:DSCauHoiCuaThanhVien ID="idDSCauHoi" runat="server" ></UC:DSCauHoiCuaThanhVien>
+        <br />
         <UC:DSCauTraLoiCuaThanhVien ID="idDSCauTraLoi" runat="server" ></UC:DSCauTraLoiCuaThanhVien>
     </div>
     <!--end  ds câu hỏi-->
   </div>
   <!--end thông tin hoạt động của cá nhân --> 
 </asp:Content>
-<asp:Content ID="Content_Sidebar" ContentPlaceHolderID="ContentPlaceHolder_Sidebar" runat="server">
-    <div class="sidebar">    	
-    	<div class="boxWrapper">
-      		<div class="box">
-           	 	<div class="boxContent">
-               	  <div class="boxTitle">Những câu hỏi mới </div>
-                  <div class="boxContentMain">
-                    	<p class="link-2"><a href="#">1. Nguyễn văn A</a></p>
-                    	<p class="link-2"><a href="#">2. Nguyễn văn B</a></p>
-                    	<p class="link-2"><a href="#">3. Nguyễn văn C</a></p>
-                   	<p class="link-2"><a href="#">4. Nguyễn văn D</a></p>
-                    	<p class="link-2"><a href="#">5. Nguyễn văn E </a></p>
-                  </div>
-           	 	</div>
-      		</div>
-    </div>
+<asp:Content ID="Content_Sidebar" ContentPlaceHolderID="ContentPlaceHolder_Sidebar" runat="server">    
         <!--end .boxWrapper - Những câu hỏi mới -->
         <div>
             <UC:Top5ThanhVien id="idTop5ThanhVien" runat="server" />

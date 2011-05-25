@@ -28,3 +28,8 @@ C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHo
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.dll
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WesiteHoiDap.BUS\bin\Debug\WesiteHoiDap.BUS.pdb
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WesiteHoiDap.BUS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.dll
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WesiteHoiDap.BUS\obj\Debug\WesiteHoiDap.BUS.pdb

@@ -43,3 +43,10 @@ C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
 C:\Users\Anh Vu\Desktop\WebsiteHoiDap\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\bin\WebsiteHoiDap.dll
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\bin\WebsiteHoiDap.pdb
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.dll
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\bin\WesiteHoiDap.BUS.pdb
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.dll
+C:\Users\MinhDuc\Desktop\NMCNPM\Source\WebsiteHoiDap\obj\Debug\WebsiteHoiDap.pdb

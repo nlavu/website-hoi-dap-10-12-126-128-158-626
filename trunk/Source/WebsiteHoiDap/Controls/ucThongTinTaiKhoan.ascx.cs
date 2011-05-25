@@ -30,6 +30,8 @@ namespace WebsiteHoiDap.Controls
                 ThanhVien thanhVien = new ThanhVien();
                 thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
 
+                lblTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
+
                 lblHoTen.Text = thanhVien.HoTen;
                 lblNgaySinh.Text = thanhVien.NgaySinh.ToShortDateString().ToString();
                 if (thanhVien.GioiTinh == 0)
