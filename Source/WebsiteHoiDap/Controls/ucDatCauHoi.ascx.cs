@@ -18,18 +18,27 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ChuDe chuDe = new ChuDe();
-            this.lstChuDe.DataSource = chuDe.LayDSChuDe();
-            this.lstChuDe.DataValueField = "MaChuDe";
-            this.lstChuDe.DataTextField = "TenChuDe";
-            this.lstChuDe.DataBind();
+            int iDaDangNhap = (Int32)Session["IsLogin"];
+            if (iDaDangNhap == 0)
+            {
+                Response.Redirect("Index.aspx");
+            }
+            else
+            {
 
-            pnlKetQuaDatCauHoi.Visible = false;
-            chkNgayHetHan.Checked = false;
-            CalenderNgayHetHan.Visible = false;
+                ChuDe chuDe = new ChuDe();
+                this.lstChuDe.DataSource = chuDe.LayDSChuDe();
+                this.lstChuDe.DataValueField = "MaChuDe";
+                this.lstChuDe.DataTextField = "TenChuDe";
+                this.lstChuDe.DataBind();
 
-            txtCauHoi.Text = Request.QueryString["noidungcauhoi"];                       
-          
+                pnlKetQuaDatCauHoi.Visible = false;
+                chkNgayHetHan.Checked = false;
+                //txtNgayHetHan.Visible = false;
+                //txtNgayHetHan.Enabled = false;
+
+                //txtCauHoi.Text = Request.QueryString["noidungcauhoi"];                       
+            }
         }
 
       
@@ -38,7 +47,17 @@ namespace WebsiteHoiDap.Controls
             WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
 
             cauHoi.NgayHoi = DateTime.Now.Date;
-            cauHoi.NgayHetHan = CalenderNgayHetHan.SelectedDate;
+            if (chkNgayHetHan.Checked)
+            {
+                int ngayHetHan = int.Parse(txtNgayHetHan.Text);
+                if (ngayHetHan == 0)
+                    cauHoi.NgayHetHan = DateTime.Parse("1/1/2200");
+                else
+                    cauHoi.NgayHetHan = cauHoi.NgayHoi.AddDays(ngayHetHan);
+            }
+            else
+                cauHoi.NgayHetHan = DateTime.Parse("1/1/2220");
+
             cauHoi.DanhGia = 0;
             cauHoi.BaoCaoViPham = 0;
             cauHoi.NoiDungCauHoi = txtCauHoi.Text;
@@ -87,9 +106,15 @@ namespace WebsiteHoiDap.Controls
         protected void chkNgayHetHan_CheckedChanged(object sender, EventArgs e)
         {
             if (chkNgayHetHan.Checked)
-                CalenderNgayHetHan.Visible = true;
+            {
+                txtNgayHetHan.Visible = true;
+                txtNgayHetHan.Enabled = true;
+            }
             else
-                CalenderNgayHetHan.Visible = false;
+            {
+                txtNgayHetHan.Visible = false;
+                txtNgayHetHan.Enabled = false;
+            }
         }
     }
 }

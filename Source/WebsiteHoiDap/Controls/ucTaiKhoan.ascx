@@ -26,7 +26,7 @@
                              	    </asp:Label>
                              	 <br />
                              	    <asp:Button runat="server" ID="btnDangXuat" Text="Đăng xuất" 
-                                    onclick="btnDangXuat_Click1"/>
+                                    onclick="btnDangXuat_Click"/>
                             </td>
                           </tr>
                           <tr>

@@ -18,15 +18,23 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            pnlKetQuaTraLoi.Visible = false;
-            pnlTraLoi.Visible = true;
-            // giả sử mã câu hỏi đang trả lời là 1
-            int intMaCauHoi = 1;
-            WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
-            cauHoi = cauHoi.LayCauHoiTheoMa(intMaCauHoi);
+            int iDaDangNhap = (Int32)Session["IsLogin"];
+            if (iDaDangNhap == 0)
+            {
+                Response.Redirect("Index.aspx");
+            }
+            else
+            {
+                pnlKetQuaTraLoi.Visible = false;
+                pnlTraLoi.Visible = true;
+                // giả sử mã câu hỏi đang trả lời là 1
+                int intMaCauHoi = 1;
+                WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
+                cauHoi = cauHoi.LayCauHoiTheoMa(intMaCauHoi);
 
-            lblCauHoi.Text = cauHoi.NoiDungCauHoi;
-            lblGhiChuCauHoi.Text = cauHoi.GhiChu;
+                lblCauHoi.Text = cauHoi.NoiDungCauHoi;
+                lblGhiChuCauHoi.Text = cauHoi.GhiChu;
+            }
         }
 
        

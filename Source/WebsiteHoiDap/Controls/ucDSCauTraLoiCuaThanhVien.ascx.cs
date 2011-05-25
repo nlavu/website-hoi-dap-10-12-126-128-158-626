@@ -21,7 +21,7 @@ namespace WebsiteHoiDap.Controls
             int iDaDangNhap = (Int32)Session["IsLogin"];
             if (iDaDangNhap == 0)
             {
-                Response.Redirect("../Index.aspx");
+                Response.Redirect("Index.aspx");
             }
             else
             {

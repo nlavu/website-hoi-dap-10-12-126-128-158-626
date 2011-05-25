@@ -69,23 +69,12 @@
                 	    <table width="100%" border="0">
                           <tr>
                             <td>
+                           
                                 <asp:CheckBox ID="chkNgayHetHan" runat="server" 
-                                    Text="Câu hỏi có giới hạn thời gian trả lời." 
-                                    oncheckedchanged="chkNgayHetHan_CheckedChanged" />
+                                    Text="Check và điền số ngày nếu muốn câu hỏi có giới hạn thời gian trả lời." 
+                                    oncheckedchanged="chkNgayHetHan_CheckedChanged"/>
                                 <br />
-                                <asp:Calendar ID="CalenderNgayHetHan" runat="server" Height="200px" 
-                                    Width="220px" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" 
-                                    DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
-                                    ForeColor="#663399" ShowGridLines="True">
-                                    <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-                                    <SelectorStyle BackColor="#FFCC66" />
-                                    <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-                                    <OtherMonthDayStyle ForeColor="#CC9966" />
-                                    <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-                                    <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-                                    <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
-                                        ForeColor="#FFFFCC" />
-                                </asp:Calendar>
+                                <asp:TextBox ID=txtNgayHetHan runat="server"></asp:TextBox>
                                 
                               </td>
                             <td>&nbsp;</td>
