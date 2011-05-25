@@ -19,12 +19,19 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int IDUser = 1;
-            WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
-            List<WebsiteHoiDap.BUS.CauHoi> lstDanhSachCauHoiThanhVien = cauHoi.LayCauHoiTheoNguoiHoi(IDUser);
-            this.grvCauHoiThanhVien.DataSource = lstDanhSachCauHoiThanhVien;
-            this.grvCauHoiThanhVien.DataBind();
-
+            int iDaDangNhap = (Int32)Session["IsLogin"];
+            if (iDaDangNhap == 0)
+            {
+                Response.Redirect("../Index.aspx");
+            }
+            else
+            {
+                int IDUser = (Int32)Session["IdUser"];
+                WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
+                List<WebsiteHoiDap.BUS.CauHoi> lstDanhSachCauHoiThanhVien = cauHoi.LayCauHoiTheoNguoiHoi(IDUser);
+                this.grvCauHoiThanhVien.DataSource = lstDanhSachCauHoiThanhVien;
+                this.grvCauHoiThanhVien.DataBind();
+            }
         }
     }
 

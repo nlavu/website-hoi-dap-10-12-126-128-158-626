@@ -18,20 +18,31 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Id User
-            int IDUser = 1;
-            ThanhVien thanhVien = new ThanhVien();
-            thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
+            //Id 
+            int iDaDangNhap = (Int32)Session["IsLogin"];
+            if (iDaDangNhap == 0)
+            {
+                pnlTaiKhoan.Visible = false;
+            }
+            else
+            {
 
-            lblTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
-            lblDiem.Text = thanhVien.Diem.ToString();
-            lblCapBac.Text = thanhVien.CapBac.ToString();
+                int IDUser = (Int32)Session["IdUser"];
+                ThanhVien thanhVien = new ThanhVien();
+                thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
 
+                lblTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
+                lblDiem.Text = thanhVien.Diem.ToString();
+                lblCapBac.Text = thanhVien.CapBac.ToString();
+            }
         }
 
         protected void btnDangXuat_Click(object sender, EventArgs e)
         {
             //đăng xuất
+            Session["IsLogin"] = 0;
+            Session["IdUser"] = 0;
+            Session["Username"] = "username";
             Response.Redirect("Index.aspx");
         }
     }
