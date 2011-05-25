@@ -16,31 +16,6 @@
         </Columns>      
             
         </asp:GridView>
-    	<table width="100%" border="0" cellspacing="5" id="hor-zebra">
-          <tr class="odd">
-            <td width="8%"><a href="#"><img src="image/profile_48c.png" width="48" height="48" /></a></td>
-            <td width="92%">
-                <ul>
-                    <li class="link-3">
-                   		<a href="#">Please help German shepherd?</a>
-                    </li>
-                    <li>
-                    	In <a href="#">Dogs</a> - Asked by <a href="#">marcus2893</a> - 0 answers - 3 
-                        seconds ago </li>
-            </ul></td>
-          </tr>
-          <tr>
-            <td width="8%"><a href="#"><img src="image/profile_48c.png" width="48" height="48" /></a></td>
-            <td width="92%">
-                <ul>
-                    <li class="link-3">
-                   		<a href="#">Please help German shepherd?</a>
-                    </li>
-                    <li>
-                    	In <a href="#">Dogs</a> - Asked by <a href="#">marcus2893</a> - 0 answers - 3 
-                        seconds ago </li>
-            </ul></td>
-          </tr>
-        </table>
+    	
     </div>
 </asp:Panel>
