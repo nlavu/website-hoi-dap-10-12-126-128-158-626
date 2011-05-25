@@ -293,6 +293,70 @@ namespace WebsiteHoiDap.BUS
         }
 
         /// <summary>
+        /// Created by  : Thu Hà
+        /// Date        : 26/5/2011     
+        /// </summary>
+        /// <param name="tenThanhVien"></param>
+        /// <returns></returns>
+        public ThanhVien LayThongTinThanhVienTheoTenTaiKhoan(string tenTaiKhoan)
+        {
+            ThanhVien res = new ThanhVien();
+            try
+            {
+                // add tham số
+                DataTable dtThanhVien = new DataTable();
+                List<SqlParameter> lstParam = new List<SqlParameter>();
+                lstParam.Add(new SqlParameter("@tentaikhoan", tenTaiKhoan));
+                dtThanhVien = SqlDataAccessHelper.ExecuteQuery("spLayThongTinThanhVienTheoTenTaiKhoan", lstParam);
+                foreach (DataRow dtRow in dtThanhVien.Rows)
+                {
+                    res.MaThanhVien = int.Parse(dtRow["MaThanhVien"].ToString().Trim());
+                    res.TenTaiKhoan = dtRow["TenTaiKhoan"].ToString();
+                    res.MatKhau = dtRow["MatKhau"].ToString();
+                    res.HoTen = dtRow["HoTen"].ToString();
+                    res.NgaySinh = DateTime.Parse(dtRow["NgaySinh"].ToString());
+                    res.GioiTinh = int.Parse(dtRow["GioiTinh"].ToString().Trim());
+                    res.Email = dtRow["Email"].ToString();
+                    res.TinhTrang = int.Parse(dtRow["TinhTrang"].ToString().Trim());
+                    res.Diem = int.Parse(dtRow["Diem"].ToString().Trim());
+                    res.CapBac = int.Parse(dtRow["CapBac"].ToString().Trim());
+                    res.MaLoaiTV = int.Parse(dtRow["MaLoaiTV"].ToString().Trim());
+                    res.DaXoa = int.Parse(dtRow["DaXoa"].ToString().Trim());
+                    try
+                    {
+                        res.LyDo = dtRow["LyDo"].ToString();
+                    }
+                    catch
+                    {
+                        res.LyDo = "";
+                    }
+                    try
+                    {
+                        res.NgayXoa = DateTime.Parse(dtRow["NgayXoa"].ToString());
+                    }
+                    catch
+                    {
+                        res.NgayXoa = DateTime.Parse("1/1/1900");
+                    }
+                    try
+                    {
+                        res.NguoiXoa = int.Parse(dtRow["NguoiXoa"].ToString().Trim());
+                    }
+                    catch
+                    {
+                        res.NguoiXoa = int.MinValue;
+                    }
+                }
+            }
+            catch
+            {
+                res = null;
+            }
+
+            return res;
+        }
+
+        /// <summary>
         /// Xóa thành viên
         /// Created by  : Minh Anh
         /// Date        : 9/5/2011

@@ -25,7 +25,8 @@
                              	        <span class="link-3"><a href="#"></a></span>
                              	    </asp:Label>
                              	 <br />
-                             	    <asp:Button runat="server" ID="btnDangXuat" />
+                             	    <asp:Button runat="server" ID="btnDangXuat" Text="Đăng xuất" 
+                                    onclick="btnDangXuat_Click1"/>
                             </td>
                           </tr>
                           <tr>

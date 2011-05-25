@@ -18,12 +18,20 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CauTraLoi cauTraLoi = new CauTraLoi();
-            int IDUser = 1;
-            List<CauTraLoi> lstCauTraLoiThanhVien = new List<CauTraLoi>();
-            lstCauTraLoiThanhVien = cauTraLoi.LayDSCauTraLoiTheoMaNguoiTraLoi(IDUser);
-            this.grvCauTraLoiThanhVien.DataSource = lstCauTraLoiThanhVien;
-            this.grvCauTraLoiThanhVien.DataBind();
+            int iDaDangNhap = (Int32)Session["IsLogin"];
+            if (iDaDangNhap == 0)
+            {
+                Response.Redirect("../Index.aspx");
+            }
+            else
+            {
+                CauTraLoi cauTraLoi = new CauTraLoi();
+                int IDUser = (Int32)Session["IdUser"];
+                List<CauTraLoi> lstCauTraLoiThanhVien = new List<CauTraLoi>();
+                lstCauTraLoiThanhVien = cauTraLoi.LayDSCauTraLoiTheoMaNguoiTraLoi(IDUser);
+                this.grvCauTraLoiThanhVien.DataSource = lstCauTraLoiThanhVien;
+                this.grvCauTraLoiThanhVien.DataBind();
+            }
         }
     }
 }
