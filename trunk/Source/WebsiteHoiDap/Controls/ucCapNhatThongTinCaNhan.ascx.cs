@@ -17,6 +17,12 @@ namespace WebsiteHoiDap.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Id 
+            int iDaDangNhap = (Int32)Session["IsLogin"];
+            if (iDaDangNhap == 0)
+            {
+                Response.Redirect("Index.aspx");
+            }
 
         }
     }
