@@ -21,8 +21,8 @@ namespace WebsiteHoiDap.Controls
         //Edit by : Anh Vũ
         protected void Page_Load(object sender, EventArgs e)
         {
-            ThanhVien thanhVien = new ThanhVien();
-            List<ThanhVien> lstThanhVien = thanhVien.LayDSThanhVien();
+            
+            List<ThanhVien> lstThanhVien = ThanhVien.LayDSThanhVien();
             List<ThanhVien> lstTop5 = new List<ThanhVien>();
 
             if (lstThanhVien.Count == 0)

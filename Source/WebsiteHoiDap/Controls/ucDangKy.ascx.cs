@@ -50,7 +50,7 @@ namespace WebsiteHoiDap.Controls
                 thanhVienDto.DaXoa = 0;
                 
                 // thêm vào cơ sở dữ liệu
-                int kq = thanhVienDto.ThemThanhVien();
+                int kq = ThanhVien.ThemThanhVien(thanhVienDto);
                 // nếu thất bại thì thông báo lỗi
                 if (kq == 0)
                 {

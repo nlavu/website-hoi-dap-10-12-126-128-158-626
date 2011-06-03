@@ -17,7 +17,26 @@ namespace WebsiteHoiDap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            idDSCauHoi.Visible = false;
+            idDSCauTraLoi.Visible = false;
+
+            string type = String.Empty;
+            type = Request.QueryString["type"];
+            switch (type)
+            {
+                case "cauhoi":
+                    idDSCauHoi.Visible = true;
+                    break;
+                case "traloi":
+                    idDSCauTraLoi.Visible = true;
+                    break;
+                case "dstheodoi":
+                    //idDSCauHoi.Visible = true;
+                    break;
+                default:
+                    idDSCauHoi.Visible = true;
+                    break;
+            }
         }
     }
 }

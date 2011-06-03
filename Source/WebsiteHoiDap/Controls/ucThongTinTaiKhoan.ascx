@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td width="16%" align="center" valign="top">
-        	<a href="#"><img src="image/profile_48c.png" width="100" height="100" /></a>                 
+        	<a href="#"><img src="image/avatar.png" width="100" height="100" /></a>                 
         	    <span class="link-2"><a href="#"><asp:Label ID="lblTenTaiKhoan" runat="server"></asp:Label></a></span>
         </td>
         <td width="45%">

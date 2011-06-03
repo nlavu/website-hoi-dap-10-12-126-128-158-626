@@ -136,7 +136,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="intMaCauHoi"></param>
         /// <returns></returns>
-        public List<CauTraLoi> LayDSCauTraLoiTheoMaCauHoi(int intMaCauHoi)
+        public static List<CauTraLoi> LayDSCauTraLoiTheoMaCauHoi(int intMaCauHoi)
         {
             List<CauTraLoi> lstCauTraLoi = new List<CauTraLoi>();
             List<SqlParameter> lstParams = new List<SqlParameter>();
@@ -222,7 +222,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="intMaThanhVien"></param>
         /// <returns></returns>
-        public List<CauTraLoi> LayDSCauTraLoiTheoMaNguoiTraLoi(int intMaThanhVien)
+        public static List<CauTraLoi> LayDSCauTraLoiTheoMaNguoiTraLoi(int intMaThanhVien)
         {
             List<CauTraLoi> lstCauTraLoi = new List<CauTraLoi>();
             List<SqlParameter> lstParams = new List<SqlParameter>();
@@ -318,25 +318,25 @@ namespace WebsiteHoiDap.BUS
         /// Thêm thì ko cần thuộc tính Cập nhật
         /// </summary>
         /// <returns></returns>        
-        public int ThemCauTraLoi()
+        public static int ThemCauTraLoi(CauTraLoi cauTraLoi)
         {
 
             int res = 0;
             List<SqlParameter> lstParams = new List<SqlParameter>();
             try
             {
-                lstParams.Add(new SqlParameter("@ngaytraloi", NgayTraLoi));
-                lstParams.Add(new SqlParameter("@sosao", SoSao));
-                lstParams.Add(new SqlParameter("@songuoibinhchon", SoNguoiBinhChon));
-                lstParams.Add(new SqlParameter("@baocaovipham", BaoCaoViPham));
-                lstParams.Add(new SqlParameter("@ghichu", GhiChu));
-                lstParams.Add(new SqlParameter("@noidung", NoiDung));
-                lstParams.Add(new SqlParameter("@macauhoi", MaCauHoi));
-                lstParams.Add(new SqlParameter("@mathanhvien", MaThanhVien));
-                lstParams.Add(new SqlParameter("@daxoa", DaXoa));
-                lstParams.Add(new SqlParameter("@lydo", LyDo));
-                lstParams.Add(new SqlParameter("@ngayxoa", DaXoa));
-                lstParams.Add(new SqlParameter("@nguoixoa", NguoiXoa));
+                lstParams.Add(new SqlParameter("@ngaytraloi", cauTraLoi.NgayTraLoi));
+                lstParams.Add(new SqlParameter("@sosao", cauTraLoi.SoSao));
+                lstParams.Add(new SqlParameter("@songuoibinhchon", cauTraLoi.SoNguoiBinhChon));
+                lstParams.Add(new SqlParameter("@baocaovipham", cauTraLoi.BaoCaoViPham));
+                lstParams.Add(new SqlParameter("@ghichu", cauTraLoi.GhiChu));
+                lstParams.Add(new SqlParameter("@noidung", cauTraLoi.NoiDung));
+                lstParams.Add(new SqlParameter("@macauhoi", cauTraLoi.MaCauHoi));
+                lstParams.Add(new SqlParameter("@mathanhvien", cauTraLoi.MaThanhVien));
+                lstParams.Add(new SqlParameter("@daxoa", cauTraLoi.DaXoa));
+                lstParams.Add(new SqlParameter("@lydo", cauTraLoi.LyDo));
+                lstParams.Add(new SqlParameter("@ngayxoa", cauTraLoi.DaXoa));
+                lstParams.Add(new SqlParameter("@nguoixoa", cauTraLoi.NguoiXoa));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spThemCauTraLoi", lstParams);
             }
@@ -358,7 +358,7 @@ namespace WebsiteHoiDap.BUS
         /// <param name="dtmNgayXoa"></param>
         /// <param name="intNguoiXoa"></param>
         /// <returns></returns>
-        public int XoaCauTraLoi(int intMaCauTraLoi, string strLyDo, DateTime dtmNgayXoa, int intNguoiXoa)
+        public static int XoaCauTraLoi(int intMaCauTraLoi, string strLyDo, DateTime dtmNgayXoa, int intNguoiXoa)
         {
 
             int res = 0;

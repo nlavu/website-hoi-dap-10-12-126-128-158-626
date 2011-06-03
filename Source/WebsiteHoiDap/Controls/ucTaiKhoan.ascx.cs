@@ -28,8 +28,7 @@ namespace WebsiteHoiDap.Controls
             {
 
                 int IDUser = (Int32)Session["IdUser"];
-                ThanhVien thanhVien = new ThanhVien();
-                thanhVien = thanhVien.LayThongTinThanhVienTheoMa(IDUser);
+                ThanhVien thanhVien = ThanhVien.LayThongTinThanhVienTheoMa(IDUser);
 
                 lblTenTaiKhoan.Text = thanhVien.TenTaiKhoan;
                 lblDiem.Text = thanhVien.Diem.ToString();

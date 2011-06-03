@@ -27,8 +27,8 @@ namespace WebsiteHoiDap.Controls
             else
             {
                 int IDUser = (Int32)Session["IdUser"];
-                WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
-                List<WebsiteHoiDap.BUS.CauHoi> lstDanhSachCauHoiThanhVien = cauHoi.LayCauHoiTheoNguoiHoi(IDUser);
+               
+                List<WebsiteHoiDap.BUS.CauHoi> lstDanhSachCauHoiThanhVien = WebsiteHoiDap.BUS.CauHoi.LayCauHoiTheoNguoiHoi(IDUser);
                 this.grvCauHoiThanhVien.DataSource = lstDanhSachCauHoiThanhVien;
                 this.grvCauHoiThanhVien.DataBind();
             }

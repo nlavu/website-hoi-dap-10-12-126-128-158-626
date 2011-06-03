@@ -46,7 +46,7 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>DataTable dtDSHopDong</returns>
 
-        public List<ChuDe> LayDSChuDe()
+        public static List<ChuDe> LayDSChuDe()
         {
             List<ChuDe> lstDSChuDe = new List<ChuDe>();
             DataTable dtDSChuDe = new DataTable();
@@ -106,14 +106,14 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
 
-        public int ThemChuDe()
+        public static int ThemChuDe(ChuDe chuDe)
         {
             int res = 0;
             try
             {
                 List<SqlParameter> lstParameters = new List<SqlParameter>();
 
-                lstParameters.Add(new SqlParameter("@tenchude", strTenChuDe));
+                lstParameters.Add(new SqlParameter("@tenchude", chuDe.TenChuDe));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spThemChuDe", lstParameters);
             }
@@ -133,14 +133,14 @@ namespace WebsiteHoiDap.BUS
         /// <param name="chuDe"> </param>
         /// <returns>1 : 0</returns>
         
-        public int XoaChuDe()
+        public static int XoaChuDe(int maChuDe)
         {
             int res = 0;
             try
             {
                 List<SqlParameter> lstParameters = new List<SqlParameter>();
 
-                lstParameters.Add(new SqlParameter("@machude", intMaChuDe));
+                lstParameters.Add(new SqlParameter("@machude", maChuDe));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spXoaChuDe", lstParameters);
             }

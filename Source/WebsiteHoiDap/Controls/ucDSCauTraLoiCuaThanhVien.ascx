@@ -3,9 +3,9 @@
 <asp:Panel ID = "idDSCauTraLoi" runat="server">
     <div class="content-list-question">
         <asp:GridView ID="grvCauTraLoiThanhVien" runat="server" AllowPaging="false" ShowHeader="true" 
-        ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" BorderStyle="None">
+        ShowFooter="false" GridLines="None" AutoGenerateColumns="false" BorderStyle="None">
         <Columns>
-            <asp:TemplateField>
+            <asp:TemplateField ControlStyle-BorderStyle="None">
                 <HeaderTemplate>
                     <span class="link-3"><a href="#"> Câu trả lời của thành viên : </a></span>
                 </HeaderTemplate>                

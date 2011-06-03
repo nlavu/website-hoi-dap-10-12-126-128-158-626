@@ -17,9 +17,7 @@ namespace WebsiteHoiDap.BUS
         public static String ConnectionString
         {
             get
-            {
-                //string sqlCon = "[ChuoiKetNoi]";
-                //string sqlCon = @"Data Source=MINHDUC-PC;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;";
+            {                
                 string sqlCon = ReadConnectionString("ConnectionString.xml");              
                 return sqlCon;
             }

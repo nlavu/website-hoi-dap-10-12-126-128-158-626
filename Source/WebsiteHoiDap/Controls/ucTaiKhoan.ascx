@@ -12,7 +12,7 @@
                         <table width="100%" border="0" cellpadding="2">
                           <tr>
                             <td width="27%" align="center" valign="middle">
-                            	<img src="image/profile_48c.png" width="48" height="48" />
+                            	<img src="image/avatar.png" width="48" height="48" />
                             </td>
                             <td width="73%">
                                 Chào bạn <asp:Label ID="lblTenTaiKhoan" runat="server" Text=""> <span class="link-3"><a href="#">ABC</a></span></asp:Label><br />

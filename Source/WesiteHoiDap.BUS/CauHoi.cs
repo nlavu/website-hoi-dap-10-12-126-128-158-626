@@ -32,7 +32,7 @@ namespace WebsiteHoiDap.BUS
             get { return dtmNgayHetHan; }
             set { dtmNgayHetHan = value; }
         }
-        int intDanhGia = int.MinValue;
+        int intDanhGia = 0;
 
         public int DanhGia
         {
@@ -144,7 +144,7 @@ namespace WebsiteHoiDap.BUS
         /// 8/5/2011
         /// </summary>
         /// <returns>ds câu hỏi</returns>
-        public List<CauHoi> LayDSCauHoi()
+        public static List<CauHoi> LayDSCauHoi()
         {
             List<CauHoi> lstDanhSachCauHoi = new List<CauHoi>();
             try
@@ -251,7 +251,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="intMaCauHoi"></param>
         /// <returns>1 câu hỏi</returns>
-        public CauHoi LayCauHoiTheoMa (int intMaCauHoi)
+        public static CauHoi LayCauHoiTheoMa (int intMaCauHoi)
         {
             CauHoi cauHoi = new CauHoi();
 
@@ -360,7 +360,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="intMaChuDe"></param>
         /// <returns></returns>
-        public List<CauHoi> LayCauHoiTheoChuDe(int intMaChuDe)
+        public static List<CauHoi> LayCauHoiTheoChuDe(int intMaChuDe)
         {
             List<CauHoi> lstDanhSachCauHoi = new List<CauHoi>();
             List<SqlParameter> lstParameters = new List<SqlParameter>();
@@ -467,7 +467,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="intMaThanhVien"></param>
         /// <returns></returns>
-        public List<CauHoi> LayCauHoiTheoNguoiHoi(int intMaThanhVien)
+        public static List<CauHoi> LayCauHoiTheoNguoiHoi(int intMaThanhVien)
         {
             List<CauHoi> lstDanhSachCauHoi = new List<CauHoi>();
             List<SqlParameter> lstParameters = new List<SqlParameter>();
@@ -569,7 +569,7 @@ namespace WebsiteHoiDap.BUS
         }
 
         // 5. THEM CAU HOI
-        public int ThemCauHoi()
+        public static int ThemCauHoi(CauHoi cauHoi)
         {
             int res = 0;
             try
@@ -577,65 +577,65 @@ namespace WebsiteHoiDap.BUS
                 List<SqlParameter> lstParam = new List<SqlParameter>();
                 // Thu Hà: Thêm câu hỏi không có mã câu hỏi
                 //lstParam.Add(new SqlParameter("@macauhoi", intMaCauHoi));
-                lstParam.Add(new SqlParameter("@ngayhoi", dtmNgayHoi));
+                lstParam.Add(new SqlParameter("@ngayhoi", cauHoi.NgayHoi));
                 try
                 {
-                    lstParam.Add(new SqlParameter("@ngayhethan", dtmNgayHetHan));
+                    lstParam.Add(new SqlParameter("@ngayhethan", cauHoi.NgayHetHan));
                 }
                 catch
                 {
-                    dtmNgayHetHan = DateTime.Parse("1/1/1900");
+                    cauHoi.NgayHetHan = DateTime.Parse("1/1/1900");
                 }
-                lstParam.Add(new SqlParameter("@danhgia", intDanhGia));
-                lstParam.Add(new SqlParameter("@baocaovipham", intBaoCaoViPham));
-                lstParam.Add(new SqlParameter("@noidungcauhoi", strNoiDungCauHoi));
-                lstParam.Add(new SqlParameter("@ghichu", strGhiChu));
-                lstParam.Add(new SqlParameter("@mathanhvien", intMaThanhVien));
-                lstParam.Add(new SqlParameter("@machude", intMaChuDe));
-                lstParam.Add(new SqlParameter("@daxoa", intDaXoa));
+                lstParam.Add(new SqlParameter("@danhgia", cauHoi.DanhGia));
+                lstParam.Add(new SqlParameter("@baocaovipham", cauHoi.BaoCaoViPham));
+                lstParam.Add(new SqlParameter("@noidungcauhoi", cauHoi.NoiDungCauHoi));
+                lstParam.Add(new SqlParameter("@ghichu", cauHoi.GhiChu));
+                lstParam.Add(new SqlParameter("@mathanhvien", cauHoi.MaThanhVien));
+                lstParam.Add(new SqlParameter("@machude", cauHoi.MaChuDe));
+                lstParam.Add(new SqlParameter("@daxoa", cauHoi.DaXoa));
 
                 try
                 {
-                    lstParam.Add(new SqlParameter("@lydo", strLyDo));
+                    lstParam.Add(new SqlParameter("@lydo", cauHoi.LyDo));
                 }
                 catch
                 {
-                    strLyDo = "";
+                    cauHoi.LyDo = "";
                 }
                 try
                 {
-                    lstParam.Add(new SqlParameter("@ngayxoa", dtmNgayXoa));
+                    lstParam.Add(new SqlParameter("@ngayxoa", cauHoi.NgayXoa));
                 }
                 catch
                 {
-                    dtmNgayXoa = DateTime.Parse("1/1/1900");
+                    cauHoi.NgayXoa = DateTime.Parse("1/1/1900");
                 }
 
                 try
                 {
-                    lstParam.Add(new SqlParameter("@nguoixoa", intNguoiXoa));
+                    lstParam.Add(new SqlParameter("@nguoixoa", cauHoi.NguoiXoa));
                 }
                 catch
                 {
-                    intNguoiXoa = int.MinValue;
+                    cauHoi.NguoiXoa = int.MinValue;
                 }
 
-                lstParam.Add(new SqlParameter("@songuoibinhchon", intSoNguoiBinhChon));
+                lstParam.Add(new SqlParameter("@songuoibinhchon", cauHoi.SoNguoiBinhChon));
                 try
                 {
-                    lstParam.Add(new SqlParameter("@ngaycapnhat", dtmNgayCapNhat));
+                    lstParam.Add(new SqlParameter("@ngaycapnhat", cauHoi.NgayCapNhat));
                 }
                 catch 
                 {
-                    dtmNgayCapNhat = DateTime.Parse("1/1/1900");
+                    cauHoi.NgayCapNhat = DateTime.Parse("1/1/1900");
                 }
                 try
                 {
-                    lstParam.Add(new SqlParameter("@nguoicapnhat", intNguoiCapNhat));
+                    lstParam.Add(new SqlParameter("@nguoicapnhat", cauHoi.NguoiCapNhat));
                 }
                 catch
                 {
-                    intNguoiCapNhat = int.MinValue;
+                    cauHoi.NguoiCapNhat = int.MinValue;
                 }
 
                 // Ngọc Hà :Phải truyền vào truy vấn lstParam --10/05/2011

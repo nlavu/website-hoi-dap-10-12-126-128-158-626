@@ -9,7 +9,7 @@
                 </div>
                 <div class="boxContentMain">
                  <asp:GridView ID="grvTop5ThanhVien" runat="server" AllowPaging="false" ShowHeader="true" 
-                        ShowFooter="false" GridLines="Horizontal" AutoGenerateColumns="false" BorderStyle="None"
+                        ShowFooter="false" GridLines="None" AutoGenerateColumns="false" BorderStyle="None"
                         Width="100%" CellSpacing="0" >
                         <Columns>
                             <asp:TemplateField ControlStyle-BorderStyle="None" >                                             

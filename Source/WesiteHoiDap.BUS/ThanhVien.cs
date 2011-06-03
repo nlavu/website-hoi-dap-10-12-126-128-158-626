@@ -132,27 +132,27 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns>1: 0</returns>
-        public int ThemThanhVien()
+        public static int ThemThanhVien(ThanhVien thanhVien)
         {
             int res = 0;            
             try
             {
                 // add tham số
                 List<SqlParameter> lstParam = new List<SqlParameter>();
-                lstParam.Add(new SqlParameter("@tentaikhoan", strTenTaiKhoan));
-                lstParam.Add(new SqlParameter("@matkhau", strMatKhau));
-                lstParam.Add(new SqlParameter("@hoten", strHoTen));
-                lstParam.Add(new SqlParameter("@ngaysinh", dtmNgaySinh));
-                lstParam.Add(new SqlParameter("@gioitinh", intGioiTinh));
-                lstParam.Add(new SqlParameter("@email", strEmail));
-                lstParam.Add(new SqlParameter("@tinhtrang", intTinhTrang));
-                lstParam.Add(new SqlParameter("@diem", intDiem));
-                lstParam.Add(new SqlParameter("@capbac",intCapBac));
-                lstParam.Add(new SqlParameter("@maloaitv", intMaLoaiTV));
-                lstParam.Add(new SqlParameter("@daxoa", intDaXoa));
-                lstParam.Add(new SqlParameter("@lydo", strLyDo));
-                lstParam.Add(new SqlParameter("@ngayxoa", dtmNgayXoa));
-                lstParam.Add(new SqlParameter("@nguoixoa", intNguoiXoa));
+                lstParam.Add(new SqlParameter("@tentaikhoan", thanhVien.TenTaiKhoan));
+                lstParam.Add(new SqlParameter("@matkhau", thanhVien.MatKhau));
+                lstParam.Add(new SqlParameter("@hoten", thanhVien.HoTen));
+                lstParam.Add(new SqlParameter("@ngaysinh", thanhVien.NgaySinh));
+                lstParam.Add(new SqlParameter("@gioitinh", thanhVien.GioiTinh));
+                lstParam.Add(new SqlParameter("@email", thanhVien.Email));
+                lstParam.Add(new SqlParameter("@tinhtrang", thanhVien.TinhTrang));
+                lstParam.Add(new SqlParameter("@diem", thanhVien.Diem));
+                lstParam.Add(new SqlParameter("@capbac", thanhVien.CapBac));
+                lstParam.Add(new SqlParameter("@maloaitv", thanhVien.MaLoaiTV));
+                lstParam.Add(new SqlParameter("@daxoa", thanhVien.DaXoa));
+                lstParam.Add(new SqlParameter("@lydo", thanhVien.LyDo));
+                lstParam.Add(new SqlParameter("@ngayxoa", thanhVien.NgayXoa));
+                lstParam.Add(new SqlParameter("@nguoixoa", thanhVien.NguoiXoa));
 
                 res = SqlDataAccessHelper.ExecuteNoneQuery("spThemThanhVien", lstParam);
 
@@ -179,8 +179,7 @@ namespace WebsiteHoiDap.BUS
             {
                 // add tham số
                 List<SqlParameter> lstParam = new List<SqlParameter>();
-                lstParam.Add(new SqlParameter("@mathanhvien", intMaThanhVien));
-                lstParam.Add(new SqlParameter("@tentaikhoan", strTenTaiKhoan));
+                lstParam.Add(new SqlParameter("@mathanhvien", intMaThanhVien));                
                 lstParam.Add(new SqlParameter("@hoten", strHoTen));
                 lstParam.Add(new SqlParameter("@ngaysinh", dtmNgaySinh));
                 lstParam.Add(new SqlParameter("@gioitinh", intGioiTinh));
@@ -234,7 +233,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns><ThanhVien></returns>
-        public ThanhVien LayThongTinThanhVienTheoMa(int intMaThanhVien)
+        public static ThanhVien LayThongTinThanhVienTheoMa(int intMaThanhVien)
         {
             ThanhVien res = new ThanhVien();            
             try
@@ -298,7 +297,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="tenThanhVien"></param>
         /// <returns></returns>
-        public ThanhVien LayThongTinThanhVienTheoTenTaiKhoan(string tenTaiKhoan)
+        public static ThanhVien LayThongTinThanhVienTheoTenTaiKhoan(string tenTaiKhoan)
         {
             ThanhVien res = new ThanhVien();
             try
@@ -348,8 +347,9 @@ namespace WebsiteHoiDap.BUS
                     }
                 }
             }
-            catch
+            catch (Exception e)
             {
+                throw e;
                 res = null;
             }
 
@@ -394,7 +394,7 @@ namespace WebsiteHoiDap.BUS
         /// </summary>
         /// <param name="thanhvienDto"> </param>
         /// <returns>list<thanhvien></returns>
-        public List<ThanhVien> LayDSThanhVien()
+        public static List<ThanhVien> LayDSThanhVien()
         {
             List<ThanhVien> res = new List<ThanhVien>();
             try

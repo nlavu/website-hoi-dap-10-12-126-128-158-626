@@ -15,10 +15,15 @@
   	<div class="header-list-question">           	  
       <table width="100%" border="0" cellspacing="0">
           <tr>
-            <td width="13%" class="menu-list-question"><a href="#">Câu hỏi</a></td>
             <td width="13%" class="menu-list-question">
-            	<a href="#" title="">Câu trả lời</a></td>
-            <td width="23%" class="menu-list-question"><a href="#">Danh sách câu hỏi theo dõi</a></td>
+                <a href="TrangCaNhan.aspx?type=cauhoi">Câu hỏi</a>
+            </td>
+            <td width="13%" class="menu-list-question">
+            	<a href="TrangCaNhan.aspx?type=traloi" title="">Câu trả lời</a>
+            </td>
+            <td width="23%" class="menu-list-question">
+                <a href="TrangCaNhan.aspx?type=dstheodoi">Danh sách câu hỏi theo dõi</a>
+            </td>
             <td width="51%">&nbsp;</td>
           </tr>
           <tr>

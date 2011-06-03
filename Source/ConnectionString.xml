@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <connectionStrings>
-  <string>Data Source=MINHDUC-PC;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;</string>
+  <string>Data Source=KHTN-F1e4617769;Initial Catalog=WebsiteHoiDap;Integrated Security=True;Connect Timeout=30;</string>
 </connectionStrings>
