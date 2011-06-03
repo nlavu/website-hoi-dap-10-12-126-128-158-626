@@ -27,8 +27,7 @@ namespace WebsiteHoiDap.Controls
             {
                 CauTraLoi cauTraLoi = new CauTraLoi();
                 int IDUser = (Int32)Session["IdUser"];
-                List<CauTraLoi> lstCauTraLoiThanhVien = new List<CauTraLoi>();
-                lstCauTraLoiThanhVien = cauTraLoi.LayDSCauTraLoiTheoMaNguoiTraLoi(IDUser);
+                List<CauTraLoi> lstCauTraLoiThanhVien = CauTraLoi.LayDSCauTraLoiTheoMaNguoiTraLoi(IDUser);
                 this.grvCauTraLoiThanhVien.DataSource = lstCauTraLoiThanhVien;
                 this.grvCauTraLoiThanhVien.DataBind();
             }

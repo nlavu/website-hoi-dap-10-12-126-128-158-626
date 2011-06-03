@@ -19,18 +19,17 @@ namespace WebsiteHoiDap.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             //Id 
+            pnlKetQuaDatDangNhap.Visible = false;
             int iDaDangNhap = (Int32)Session["IsLogin"];
             if (iDaDangNhap == 1)
             {
-                pnlDangNhap.Visible = false;
-            }
-            pnlKetQuaDatDangNhap.Visible = false;
+                pnlDangNhap.Visible = false;                            
+            }            
         }
 
         protected void btnDangNhap_Click(object sender, EventArgs e)
         {
-            ThanhVien thanhVienDto = new ThanhVien();
-            thanhVienDto = thanhVienDto.LayThongTinThanhVienTheoTenTaiKhoan(txtTenDangNhap.Text);
+            ThanhVien thanhVienDto = ThanhVien.LayThongTinThanhVienTheoTenTaiKhoan(txtTenDangNhap.Text);
 
             if (thanhVienDto == null)
             {

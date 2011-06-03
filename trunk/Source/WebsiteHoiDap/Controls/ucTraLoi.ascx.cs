@@ -29,8 +29,7 @@ namespace WebsiteHoiDap.Controls
                 pnlTraLoi.Visible = true;
                 // giả sử mã câu hỏi đang trả lời là 1
                 int intMaCauHoi = 1;
-                WebsiteHoiDap.BUS.CauHoi cauHoi = new WebsiteHoiDap.BUS.CauHoi();
-                cauHoi = cauHoi.LayCauHoiTheoMa(intMaCauHoi);
+                WebsiteHoiDap.BUS.CauHoi cauHoi = WebsiteHoiDap.BUS.CauHoi.LayCauHoiTheoMa(intMaCauHoi);
 
                 lblCauHoi.Text = cauHoi.NoiDungCauHoi;
                 lblGhiChuCauHoi.Text = cauHoi.GhiChu;
@@ -62,7 +61,7 @@ namespace WebsiteHoiDap.Controls
             cauTraLoi.DaXoa = 0;
             
             int kq;
-            kq = cauTraLoi.ThemCauTraLoi();
+            kq = CauTraLoi.ThemCauTraLoi(cauTraLoi);
             if (kq == 1)
             {
                 pnlKetQuaTraLoi.Visible = true;

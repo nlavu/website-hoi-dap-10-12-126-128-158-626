@@ -25,19 +25,20 @@ namespace WebsiteHoiDap.Controls
             }
             else
             {
+                if (!Page.IsPostBack)
+                {
+                    this.lstChuDe.DataSource = ChuDe.LayDSChuDe();
+                    this.lstChuDe.DataValueField = "MaChuDe";
+                    this.lstChuDe.DataTextField = "TenChuDe";
+                    this.lstChuDe.DataBind();
 
-                ChuDe chuDe = new ChuDe();
-                this.lstChuDe.DataSource = chuDe.LayDSChuDe();
-                this.lstChuDe.DataValueField = "MaChuDe";
-                this.lstChuDe.DataTextField = "TenChuDe";
-                this.lstChuDe.DataBind();
+                    pnlKetQuaDatCauHoi.Visible = false;
+                    chkNgayHetHan.Checked = false;
+                    //txtNgayHetHan.Visible = false;
+                    //txtNgayHetHan.Enabled = false;
 
-                pnlKetQuaDatCauHoi.Visible = false;
-                chkNgayHetHan.Checked = false;
-                //txtNgayHetHan.Visible = false;
-                //txtNgayHetHan.Enabled = false;
-
-                //txtCauHoi.Text = Request.QueryString["noidungcauhoi"];                       
+                    //txtCauHoi.Text = Request.QueryString["noidungcauhoi"];                       
+                }
             }
         }
 
@@ -86,7 +87,7 @@ namespace WebsiteHoiDap.Controls
             }
             // thêm câu hỏi vào CSDL
             int kq;
-            kq = cauHoi.ThemCauHoi();
+            kq = WebsiteHoiDap.BUS.CauHoi.ThemCauHoi(cauHoi);
             if (kq == 1)
             {
                 pnlKetQuaDatCauHoi.Visible = true;
